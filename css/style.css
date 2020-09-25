@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none !important;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.top-page-area {
+  padding: 18px 0;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.top-page-area a {
+  color: #233645;
+  font-weight: 700;
+}
+
+.top-page-area .top-left {
+  color: #666666;
+  margin-bottom: 0;
+}
+
+.top-page-area .top-left a {
+  color: black;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.top-page-area .top-right .top-right-info {
+  margin-right: 2%;
+}
+
+.top-page-area .top-right .top-right-info ul {
+  margin-bottom: 0;
+}
+
+.top-page-area .top-right .top-right-info ul li {
+  margin-left: 10px;
+}
+
+.top-page-area .top-right .top-right-info ul li:nth-child(1) {
+  border-right: 1px solid #dddddd;
+  padding-right: 17px;
+}
+
+.top-page-area .top-right .top-right-info ul li:nth-child(2) {
+  margin-left: 15px;
+}
+
+.top-page-area .top-right .top-social ul {
+  margin-bottom: 0;
+}
+
+.top-page-area .top-right .top-social ul li {
+  margin-left: 10px;
+  padding-left: 15px;
+}
+
+header .emergency-content ul {
+  display: inline-flex;
+}
+
+header .emergency-content ul li:nth-child(1) i {
+  font-size: 2.7rem;
+  color: #1ebeb6;
+}
+
+header .emergency-content ul li:nth-child(2) strong {
+  display: block;
+}
