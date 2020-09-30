@@ -21,19 +21,4 @@ a:hover {
 @import '../scss/partials/homePage/header';
 @import '../scss/partials/homePage/carouselZoom';
 @import '../scss/partials/homePage/emergencyCase';
-
-.about-hospital {
-  padding: 110px 0;
-  position: relative;
-  background-color: #f7f7f7;
-  height: 100%;
-
-
-  .back-image {
-    position: absolute;
-    // z-index: -1;
-    top: 0;
-    left: 0;
-    opacity: 0.1;
-  }
-}
+@import '../scss/partials/homePage/hospitalAbout';

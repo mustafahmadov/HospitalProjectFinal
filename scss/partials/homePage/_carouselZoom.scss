@@ -11,6 +11,12 @@
         }
     }
 
+    .carousel-item {
+        max-height: 700px;
+        overflow: hidden;
+        border: 1px solid transparent;
+    }
+
     .carousel-first-image {
         background-image: url("../img/1.jpg");
         height: 700px;
@@ -20,12 +26,17 @@
         background-position: center;
         animation: bgZoom 20s infinite;
         position: relative;
+        overflow: hidden;
+        border: 1px solid transparent;
+        z-index: 0;
     }
 
     .carousel-content {
         position: absolute;
         top: 30%;
         left: 10%;
+        overflow: hidden;
+        border: 1px solid transparent;
     }
 
     .carousel-second-image {
@@ -36,6 +47,9 @@
         background-repeat: no-repeat;
         background-position: center;
         position: relative;
+        animation: bgZoom 20s infinite;
+        overflow: hidden;
+        border: 1px solid transparent;
     }
 
     .black-background {
@@ -46,6 +60,8 @@
         opacity: 0.5;
         top: 0;
         left: 0;
+        overflow: hidden;
+        border: 1px solid transparent;
     }
 
     .content {
@@ -74,6 +90,8 @@
 
         a {
             background: linear-gradient(90deg, rgba(30, 190, 182, 1) 0%, rgba(0, 130, 124, 1) 100%);
+            transition: all 0.35s ease-in-out;
+            z-index: -1;
             display: inline-block;
             padding: 17px 32px;
             color: white;
