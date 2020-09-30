@@ -608,6 +608,121 @@ header .wrap .emergency-content ul li:nth-child(2) p strong {
   border: 2px solid #cccccc;
 }
 
-.owl-navs {
-  display: none;
+.consultation {
+  padding: 120px 0;
+}
+
+.consultation h2 {
+  font-weight: 600;
+  margin-bottom: 25px;
+  font-size: 32px;
+}
+
+.consultation p {
+  font-size: 15px;
+  margin-bottom: 32px;
+}
+
+.consultation .flat-icons {
+  text-align: center;
+  padding: 35px;
+  background: #ffffff;
+  text-align: center;
+  border: 2px solid #1ebeb6;
+}
+
+.consultation .flat-icons img {
+  width: 60px;
+  height: 60px;
+}
+
+.consultation .flat-icons h5 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.consultation .margin-div {
+  margin: 6% 6% 0 0;
+}
+
+.consultation .appoinment-form {
+  background: #1ebeb6;
+  padding: 12% 5%;
+  position: relative;
+}
+
+.consultation .appoinment-form h4 {
+  text-transform: capitalize;
+  font-weight: 600;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 5px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.consultation .appoinment-form .left-right-padding {
+  padding: 0 4%;
+}
+
+.consultation .appoinment-form input {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 23px 25px;
+  color: #ffffff;
+}
+
+.consultation .appoinment-form ::placeholder {
+  color: white;
+}
+
+.consultation .appoinment-form select {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 0 25px;
+  color: #ffffff;
+}
+
+.consultation .appoinment-form button {
+  padding: 12px 40px;
+  background: #ffffff;
+  color: #1ebeb6;
+  text-transform: capitalize;
+  font-weight: 600;
+  width: 100%;
+  border: none;
+  border-radius: 30px;
+}
+
+.consultation .appoinment-form .nice-select {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 0 25px;
+  color: #ffffff;
+}
+
+.consultation .appoinment-form .nice-select ul {
+  width: 100%;
+}
+
+.consultation .appoinment-form .nice-select ul li {
+  color: black;
+}
+
+.consultation .appoinment-form::after {
+  position: absolute;
+  left: -30px;
+  top: -30px;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #1ebeb6;
+  z-index: -1;
+  opacity: 0.2;
 }

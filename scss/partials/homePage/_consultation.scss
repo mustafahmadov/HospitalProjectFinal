@@ -1,0 +1,118 @@
+.consultation {
+    padding: 120px 0;
+
+    h2 {
+        font-weight: 600;
+        margin-bottom: 25px;
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 15px;
+        margin-bottom: 32px;
+    }
+
+    .flat-icons {
+        text-align: center;
+        padding: 35px;
+        background: #ffffff;
+        text-align: center;
+        border: 2px solid rgba(30, 190, 182, 1);
+
+        img {
+            width: 60px;
+            height: 60px;
+        }
+
+        h5 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+    }
+
+    .margin-div {
+        margin: 6% 6% 0 0;
+    }
+
+    .appoinment-form {
+        background: #1ebeb6;
+        padding: 12% 5%;
+        position: relative;
+
+        h4 {
+            text-transform: capitalize;
+            font-weight: 600;
+            color: #ffffff;
+            position: relative;
+            z-index: 1;
+            padding-bottom: 5px;
+            font-size: 22px;
+            text-align: center;
+        }
+
+        .left-right-padding {
+            padding: 0 4%;
+        }
+
+        input {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            padding: 23px 25px;
+            color: #ffffff;
+        }
+
+        ::placeholder {
+            color: white;
+        }
+
+        select {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            padding: 0 25px;
+            color: #ffffff;
+        }
+
+        button {
+            padding: 12px 40px;
+            background: #ffffff;
+            color: #1ebeb6;
+            text-transform: capitalize;
+            font-weight: 600;
+            width: 100%;
+            border: none;
+            border-radius: 30px;
+        }
+
+        .nice-select {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            padding: 0 25px;
+            color: #ffffff;
+
+            ul {
+                width: 100%;
+
+                li {
+                    color: black;
+                }
+            }
+        }
+
+        &::after {
+            position: absolute;
+            left: -30px;
+            top: -30px;
+            content: "";
+            height: 100%;
+            width: 100%;
+            background: #1ebeb6;
+            z-index: -1;
+            opacity: 0.2;
+        }
+    }
+}

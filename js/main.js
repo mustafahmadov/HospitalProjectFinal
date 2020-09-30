@@ -39,5 +39,7 @@ $(document).ready(function () {
         } else {
             nav.classList.remove("sticky-top");
         }
-    }
+    };
+
+    $('select').niceSelect();
 });
