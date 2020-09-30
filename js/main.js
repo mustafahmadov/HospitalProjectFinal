@@ -1,17 +1,26 @@
 $(document).ready(function () {
     $('.owl-carousel').owlCarousel({
-        animateIn: "fadeIn",
-        animateOut: "fadeOut",
-        stagePadding: 0,
-        items: 1,
         loop: true,
-        margin: 0,
-        singleItem: true,
-        nav: true,
+        margin: 10,
+        responsiveClass: true,
         dots: true,
-        autoplay: true
-    });
-
+        navs: false,
+        responsive: {
+            0: {
+                items: 1,
+                nav: false,
+            },
+            600: {
+                items: 2,
+                nav: false,
+            },
+            1000: {
+                items: 3,
+                nav: false,
+                loop: false
+            }
+        }
+    })
     window.onscroll = function () {
         myFunction()
     };
