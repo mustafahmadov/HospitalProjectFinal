@@ -16,7 +16,26 @@ a:hover {
 @import '../scss/partials/homePage/topPageArea';
 @import '../scss/partials/homePage/header';
 @import '../scss/partials/homePage/carouselZoom';
-@import '../scss/partials/homePage/emergencyCase';
+@import '../scss/partials/homePage/emergencyCaseArea';
 @import '../scss/partials/homePage/hospitalAbout';
 @import '../scss//partials/homePage/services';
 @import '../scss/partials/homePage/consultation';
+@import '../scss/partials/homePage/doctorLists';
+@import '../scss/partials/homePage/testimonials';
+
+.doctors-filter {
+  padding: 120px 0;
+
+  .nav-link {
+    border: none;
+    padding: 20px 15px;
+    background: rgba(30, 190, 182, 0.1);
+    border-radius: inherit;
+    align-items: center;
+  }
+
+  .background-color {
+    background: rgba(30, 190, 182, 1);
+    color: white;
+  }
+}

@@ -19,6 +19,8 @@
 </head>
 
 <body>
+
+    <!-- ===========TOP PAGE AREA START =========== -->
     <div class="top-page-area shadow-sm">
         <div class="container">
             <div class="row">
@@ -50,6 +52,10 @@
             </div>
         </div>
     </div>
+    <!-- ===========TOP PAGE AREA END =========== -->
+
+
+    <!-- ===========HEADER START =========== -->
     <header id="header">
         <div class="wrap">
             <nav class="navbar navbar-expand-lg navbar-light p-0 shadow-sm">
@@ -144,12 +150,15 @@
             </nav>
         </div>
     </header>
+    <!-- ===========HEADER END =========== -->
 
+
+    <!-- ===========CAROUSEL ZOOM START =========== -->
     <section class="carousel-zoom">
 
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
             <div class="carousel-inner">
-
+                <!--==== FIRST CAROUSEL ITEM ===-->
                 <div class="carousel-item active relative">
 
                     <div class="carousel-first-image d-flex align-items-center justify-content-center">
@@ -163,15 +172,14 @@
                                     Good
                                     Services</h4>
                                 <h2 class="animate__animated animate__slideInRight delay-2s">Meet the
-                                    <strong>Best
-                                        Hospital</strong> </h2>
+                                    <strong>Best Hospital</strong> </h2>
                                 <a class="animate__animated animate__fadeInUp delay-1s" class="btn btn-md btn-gradient"
-                                    href="#"><i class="fas fa-angle-right"></i>
-                                    Discover More</a>
+                                    href="#"><i class="fas fa-angle-right"></i>Discover More</a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!--==== SECOND CAROUSEL ITEM ===-->
                 <div class="carousel-item relative">
                     <div class="carousel-second-image d-flex align-items-center justify-content-center">
                         <div class="black-background"></div>
@@ -204,7 +212,11 @@
             </a>
         </div>
     </section>
-    <section class="emergency-case">
+    <!-- ===========CAROUSEL ZOOM END =========== -->
+
+
+    <!-- ===========EMERGENCY CASE AREA START =========== -->
+    <section class="emergency-case-area">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
@@ -239,7 +251,10 @@
             </div>
         </div>
     </section>
+    <!-- ===========EMERGENCY CASE AREA END =========== -->
 
+
+    <!-- =========== ABOUT HOSPITAL START =========== -->
     <section class="about-hospital bg-gray">
         <div class="back-image">
             <img src="img/1.png" alt="hospital">
@@ -295,7 +310,10 @@
             </div>
         </div>
     </section>
+    <!-- =========== ABOUT HOSPITAL END  =========== -->
 
+
+    <!-- ===========SERVICES START =========== -->
     <section class="services">
         <div class="services-header">
             <div class="container">
@@ -317,7 +335,7 @@
             <img src="img/8.png" alt="backgroundpng" class="img-fluid">
         </div>
         <div class="container">
-            <div class="owl-carousel">
+            <div class="owl-carousel first">
                 <div class="item">
                     <div class="item-img">
                         <img class="img-fluid" src="img/services.jpg" alt="services" />
@@ -401,8 +419,11 @@
             </div>
         </div>
     </section>
+    <!-- ===========SERVICES END =========== -->
 
-    <section class="consultation default-padding">
+
+    <!-- ===========CONSULTATION START =========== -->
+    <section class="consultation">
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 col-12">
@@ -498,11 +519,199 @@
             </div>
         </div>
     </section>
+    <!-- ===========CONSULTATION END =========== -->
 
 
+    <!-- ===========DOCTOR LISTS START =========== -->
+    <section class="doctor-lists">
+        <div class="container-fluid pl-0">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="doctor-list-back">
 
-    <!-- <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.js"></script> -->
+                    </div>
+                </div>
+                <div class="col-lg-6 common-style">
+                    <div class="doctor-list-content">
+                        <h4>At Our Clinic</h4>
+                        <h2>Our Doctors <br> Specialize in you.</h2>
+                        <p>Respect forming clothes do in he. Course so piqued no an by appear. Themselves reasonable
+                            pianoforte so motionless he as difficulty be. Abode way begin ham there power whole. Suppose
+                            neither evident welcome</p>
+                        <p>Do unpleasing indulgence impossible to conviction. Suppose neither evident welcome it at do
+                            civilly uncivil. Sing tall much you get nor.</p>
+                        <a class="btn btn-md btn-gradient mt-3" href="#"><i class="fas fa-angle-right"></i>
+                            Doctor Lists
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===========DOCTOR LISTS END =========== -->
+
+
+    <!-- ===========DOCTORS FILTER START =========== -->
+    <section class="doctors-filter">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <ul>
+                        <li>
+                            <img src="img/001-cardiologist.svg" alt="cardiolog" class="img-fluid">
+                            <a href="#" data-target="cardiolog" class="nav-link btn-filter active">Cardiologist</a>
+                        </li>
+                        <li>
+                            <img src="img/002-dermatologist.svg" alt="dermatologist" class="img-fluid">
+                            <a href="#" data-target="dermatolog" class="nav-link btn-filter">Dermatologist</a>
+                        </li>
+                        <li>
+                            <img src="img/003-paramedic.svg" alt="paramedic" class="img-fluid">
+                            <a href="#" data-target="medicine" class="nav-link btn-filter">Medicine Specialists</a>
+                        </li>
+                        <li>
+                            <a href="#" data-target="physicians" class="nav-link btn-filter">Family Physicians</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-8">
+                    <div id="cardiolog" class="doctor-area cardiolog active ">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <img src="img/doctor1.jpg" alt="doctor" class="img-fluid">
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="doctor-item">
+                                    <h3>Dr. Jonathom Doe</h3>
+                                    <p>Delightful unreserved impossible few estimating men favourable see entreaties.
+                                        She
+                                        propriety immediate was improving. He or entrance humoured likewise moderate.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="dermatolog" class="doctor-area dermatolog d-none">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <img src="img/doctor2.jpg" alt="doctor" class="img-fluid">
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="doctor-item">
+                                    <h3>Dr. Jonathom Doe</h3>
+                                    <p>Delightful unreserved impossible few estimating men favourable see entreaties.
+                                        She
+                                        propriety immediate was improving. He or entrance humoured likewise moderate.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="medicine" class="doctor-area medicine d-none">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <img src="img/doctor3.jpg" alt="doctor" class="img-fluid">
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="doctor-item">
+                                    <h3>Dr. Jonathom Doe</h3>
+                                    <p>Delightful unreserved impossible few estimating men favourable see entreaties.
+                                        She
+                                        propriety immediate was improving. He or entrance humoured likewise moderate.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="physicians" class="doctor-area physicians d-none">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <img src="img/doctor4.jpg" alt="doctor" class="img-fluid">
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="doctor-item">
+                                    <h3>Dr. Jonathom Doe</h3>
+                                    <p>Delightful unreserved impossible few estimating men favourable see entreaties.
+                                        She
+                                        propriety immediate was improving. He or entrance humoured likewise moderate.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===========DOCTORS FILTER END =========== -->
+
+
+    <!-- ===========TESTIMONIALS START =========== -->
+    <section class="testimonials">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-5">
+                    <div class="testimonial-header">
+                        <h5>TESTIMONIALS</h5>
+                        <h2>
+                            Whay people says <br />
+                            about our services
+                        </h2>
+                        <a href="#"><i class="fas fa-angle-right"></i>Viewl All</a>
+                    </div>
+                </div>
+                <div class="col-7">
+                    <div class="carousel owl-carousel owl-theme testimonial-carousel">
+                        <!--==== FIRST CAROUSEL ITEM ===-->
+                        <div class="item">
+                            <div class="item-img">
+                                <img class="img-fluid" src="img/testimonials1.jpg" alt="" />
+                            </div>
+                            <div class="item-content">
+                                <h5>Jonathom Doe</h5>
+                                <span>patient of <strong>surgery</strong></span>
+                                <p>
+                                    Totally dearest expense on demesne ye he. Curiosity
+                                    excellent commanded in me. Unpleasing.
+                                </p>
+                            </div>
+                        </div>
+                        <!--==== SECOND CAROUSEL ITEM ===-->
+                        <div class="item">
+                            <div class="item-img">
+                                <img class="img-fluid" src="img/testimonials2.jpg" alt="" />
+                            </div>
+                            <div class="item-content">
+                                <h5>Jonathom Doe</h5>
+                                <span>patient of <strong>surgery</strong></span>
+                                <p>
+                                    Totally dearest expense on demesne ye he. Curiosity
+                                    excellent commanded in me. Unpleasing.
+                                </p>
+                            </div>
+                        </div>
+                        <!--==== THIRD CAROUSEL ITEM ===-->
+                        <div class="item">
+                            <div class="item-img">
+                                <img class="img-fluid" src="img/testimonials3.jpg" alt="" />
+                            </div>
+                            <div class="item-content">
+                                <h5>Jonathom Doe</h5>
+                                <span>patient of <strong>surgery</strong></span>
+                                <p>
+                                    Totally dearest expense on demesne ye he. Curiosity
+                                    excellent commanded in me. Unpleasing.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- ===========TESTIMONIALS END =========== -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="js/jquery.nice-select.js"></script>
     <script src="https://kit.fontawesome.com/0b80c37c76.js"></script>
