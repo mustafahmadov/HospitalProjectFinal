@@ -1231,7 +1231,7 @@ header .wrap .emergency-content ul li:nth-child(2) p strong {
 
 .help-form {
   padding: 120px 0;
-  height: 700px;
+  height: 100%;
 }
 
 .help-form .help-form-image {
@@ -1316,4 +1316,110 @@ header .wrap .emergency-content ul li:nth-child(2) p strong {
   font-weight: 700;
   border: none;
   margin-top: 15px;
+}
+
+footer {
+  padding-top: 120px;
+  background-color: #001d4c !important;
+}
+
+footer .footer-logo-area p {
+  color: #96aac1;
+  line-height: 30px;
+  font-size: 15px;
+  margin-top: 9%;
+}
+
+footer .footer-logo-area ul li {
+  margin-top: 9%;
+}
+
+footer .footer-logo-area ul li .icon img {
+  width: 37px;
+  height: 30px;
+}
+
+footer .footer-logo-area ul li .icon-info {
+  margin-left: 4%;
+}
+
+footer .footer-logo-area ul li .icon-info h5 {
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 18px;
+  color: white;
+}
+
+footer .footer-logo-area ul li .icon-info span {
+  color: #96aac1;
+}
+
+footer .departments h4,
+footer .usefull-links h4 {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 22px;
+  color: white;
+}
+
+footer .departments ul li,
+footer .usefull-links ul li {
+  list-style-type: disc !important;
+  font-weight: 600;
+  color: #96aac1;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+  padding-left: 3px;
+}
+
+footer .branches {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 28px;
+  border-bottom: 2px solid #1ebeb6;
+}
+
+footer .branches ul li strong {
+  color: white;
+}
+
+footer .branches ul li p {
+  color: #96aac1;
+  font-size: 15px;
+  line-height: 30px;
+  margin-top: 15px;
+}
+
+footer .footer-bottom {
+  background: rgba(255, 255, 255, 0.03);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px 0;
+  margin-top: 120px;
+}
+
+footer .footer-bottom p {
+  color: white;
+  margin: 0 !important;
+}
+
+footer .footer-bottom p a {
+  color: white;
+  font-weight: 600;
+}
+
+footer .footer-bottom .social-medias ul {
+  margin-bottom: 0 !important;
+}
+
+footer .footer-bottom .social-medias ul li {
+  margin-left: 20px;
+}
+
+footer .footer-bottom .social-medias ul li a {
+  color: white;
+}
+
+footer .footer-bottom .social-medias ul li a i {
+  margin-right: 5px;
 }
