@@ -31,7 +31,7 @@ $(document).ready(function () {
                 items: 1,
             },
             600: {
-                items: 3,
+                items: 1,
             },
             1000: {
                 items: 2.6,
@@ -63,18 +63,14 @@ $(document).ready(function () {
     btns.click(function (e) {
         e.preventDefault();
         let attribute = $(this).attr('data-target');
-        // if ($(this).data('target') === attribute) {
-        //     $(this).addClass('active');
-        // } else {
-        //     $(this).removeClass('active');
-        // }
         $(".btn-filter").removeClass("active");
-        $(".btn-filter").removeClass('background-color');
-        // $(".tab").addClass("active"); // instead of this do the below 
+        $(".btn-filter").removeClass('default');
+        $(".nav-link").removeClass('default-white');
         $(this).addClass("active");
-        $(this).addClass('background-color');
+        $(this).addClass('default');
         if ($(this).hasClass('active')) {
-            $(this).addClass('background-color');
+            $(this).addClass('default');
+            $(this).children().addClass('default-white');
         }
 
 

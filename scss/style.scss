@@ -21,21 +21,101 @@ a:hover {
 @import '../scss//partials/homePage/services';
 @import '../scss/partials/homePage/consultation';
 @import '../scss/partials/homePage/doctorLists';
+@import '../scss/partials/homePage/doctorsFilter';
 @import '../scss/partials/homePage/testimonials';
+@import '../scss/partials/homePage/latestBlog';
 
-.doctors-filter {
+.help-form {
   padding: 120px 0;
+  height: 700px;
 
-  .nav-link {
-    border: none;
-    padding: 20px 15px;
-    background: rgba(30, 190, 182, 0.1);
-    border-radius: inherit;
-    align-items: center;
+  .help-form-image {
+    height: 460px;
+    width: 100%;
+    background: url('../img/help.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .contacts {
+      background-color: white;
+      position: absolute;
+      padding: 36px 30px 17px 30px;
+      bottom: -1px;
+      left: 30px;
+      width: 90%;
+      display: flex;
+      justify-content: space-evenly;
+
+      ul {
+        display: flex;
+        justify-content: space-evenly;
+
+        li {
+          padding: 0 30px;
+
+          h5 {
+            text-transform: uppercase;
+            font-size: 18px;
+            font-weight: 600;
+            color: #233645;
+
+            img {
+              width: 37px;
+              height: 30px;
+              margin-right: 4%;
+            }
+          }
+
+          span {
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 30px;
+            color: #666666;
+          }
+        }
+      }
+    }
+
+
   }
 
-  .background-color {
-    background: rgba(30, 190, 182, 1);
-    color: white;
+  .help-form-area {
+    margin-left: 6%;
+
+    h2 {
+      color: #233645;
+      font-weight: 600;
+
+      strong {
+        display: block;
+        color: #1ebeb6;
+        margin-top: 5px;
+        font-weight: 700;
+      }
+    }
+
+    form {
+
+      input,
+      textarea {
+        border: none !important;
+        border-bottom: 1px solid #e7e7e7 !important;
+        box-shadow: none !important;
+        margin-top: 3%;
+      }
+
+      button {
+        background: linear-gradient(90deg, rgba(30, 190, 182, 1) 0%, rgba(0, 130, 124, 1) 100%);
+        padding: 12px 35px;
+        border-radius: 30px;
+        color: #ffffff;
+        font-weight: 700;
+        border: none;
+        margin-top: 15px;
+      }
+    }
   }
+
 }
