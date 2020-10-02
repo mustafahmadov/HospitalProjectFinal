@@ -2,20 +2,57 @@
     padding: 120px 0;
     overflow: hidden;
 
+    @include lg {
+        background: #1ebeb6;
+    }
+
+    @include sm {
+        padding: 50px 0;
+    }
+
+
     .testimonial-header {
         position: relative;
         padding-left: 29%;
+
+        @include lg {
+            padding-left: 0;
+            text-align: center;
+        }
 
         h5 {
             font-weight: 700;
             margin-bottom: 25px;
             color: white;
+
+            &::before {
+                content: "\f10d";
+                position: absolute;
+                top: -86px;
+                font-family: "Font Awesome 5 Free";
+                font-weight: 600;
+                font-size: 120px;
+                opacity: 0.2;
+                color: white;
+
+                @include sm {
+                    top: -58px;
+                }
+            }
+
+            @include sm {
+                font-size: 16px;
+            }
         }
 
         h2 {
             color: white;
             font-weight: 600;
             margin-bottom: 15px;
+
+            @include sm {
+                font-size: 26px;
+            }
         }
 
         a {
@@ -42,17 +79,7 @@
             }
         }
 
-        &::before {
-            content: "\f10d";
-            position: absolute;
-            left: 28%;
-            top: -100px;
-            font-family: "Font Awesome 5 Free";
-            font-weight: 600;
-            font-size: 120px;
-            opacity: 0.2;
-            color: white;
-        }
+
 
         &::after {
             content: "";
@@ -67,6 +94,28 @@
     }
 
     .carousel {
+        @include lg {
+            .owl-item {
+                padding: 10px 57px;
+
+                .item {
+                    background: white;
+                    box-shadow: 0 0 10px #e7e7e7 !important;
+                }
+            }
+        }
+
+        @include sm {
+            .owl-item {
+                padding: 13px 15px !important;
+
+                .item {
+                    background: white;
+                    box-shadow: 0 0 10px #e7e7e7 !important;
+                }
+            }
+        }
+
         .owl-stage-outer {
             padding: 15px 0;
 
@@ -96,6 +145,11 @@
                     color: #233645;
                     font-weight: 600;
                     margin-bottom: 5px;
+
+                    @include sm {
+                        font-size: 16px;
+                        color: #233645;
+                    }
                 }
 
                 span {
@@ -103,6 +157,7 @@
                     margin-bottom: 13px;
                     font-size: 12px;
                     text-transform: uppercase;
+                    color: #666666;
 
                     strong {
                         color: #1ebeb6;
@@ -111,6 +166,10 @@
 
                 p {
                     margin: 0;
+                    font-size: 15px;
+                    color: #666666;
+                    font-weight: 400;
+                    margin-top: 2%;
                 }
             }
         }

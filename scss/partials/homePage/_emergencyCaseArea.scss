@@ -47,6 +47,9 @@
                 color: #666666;
             }
         }
+
+
+
     }
 
     .img-area {
@@ -76,5 +79,20 @@
             transform: translate(-50%, -50%);
             border-radius: 50%;
         }
+
+        @include lg {
+            margin-top: 5% !important;
+        }
+
+        @include md {
+            display: none;
+        }
     }
+
+    .emergency-second {
+        @include lg {
+            margin-top: 9%;
+        }
+    }
+
 }

@@ -2,6 +2,10 @@
     padding: 120px 0;
     background-color: #f7f7f7;
 
+    @include sm {
+        padding: 50px 0 40px 0;
+    }
+
     .latest-blog-header {
         .long-divider {
             display: inline-block;
@@ -100,6 +104,9 @@
                     -webkit-transition: all 0.35s ease-in-out;
                     font-size: 22px;
 
+                    @include md {
+                        font-size: 18px;
+                    }
 
                     &:hover {
                         color: #1ebeb6;
@@ -117,7 +124,17 @@
                 ul {
                     display: flex;
 
+                    @include cmn {
+                        justify-content: center !important;
+                    }
+
                     li {
+                        &:nth-child(1) {
+                            @include cmn {
+                                display: none;
+                            }
+                        }
+
                         img {
                             width: 45px;
                             height: 45px;

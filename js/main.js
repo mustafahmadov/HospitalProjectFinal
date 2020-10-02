@@ -8,16 +8,16 @@ $(document).ready(function () {
         responsive: {
             0: {
                 items: 1,
-                nav: false,
+                dots: true,
             },
-            600: {
+            800: {
                 items: 2,
-                nav: false,
+                dots: true,
             },
             1000: {
                 items: 3,
-                nav: false,
                 loop: false,
+                dots: true,
             },
         },
     });
@@ -25,7 +25,7 @@ $(document).ready(function () {
         loop: true,
         margin: 30,
         dots: true,
-        dotsEach: 2,
+        dotsEach: 1,
         responsive: {
             0: {
                 items: 1,
@@ -81,4 +81,23 @@ $(document).ready(function () {
         }
 
     });
+    $(".nav-link").hover(
+        function () {
+            $(this).next().addClass('d-block');
+            $(this).next().addClass('active');
+        },
+
+        function () {
+            $(this).next().removeClass('d-block');
+            $(this).next().removeClass('active');
+            if (!($(this).next().hasClass('active'))) {
+                $(this).next().addClass('d-none');
+            }
+        }
+    )
+    $('.nav-link').next().hover(
+        function () {
+            $(this).toggleClass('d-block');
+        }
+    )
 });

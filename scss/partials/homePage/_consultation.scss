@@ -19,6 +19,10 @@
         text-align: center;
         border: 2px solid rgba(30, 190, 182, 1);
 
+        @include md {
+            margin-top: 5%;
+        }
+
         img {
             width: 60px;
             height: 60px;
@@ -33,12 +37,29 @@
 
     .margin-div {
         margin: 6% 6% 0 0;
+
+        @include lg {
+            margin: 0 !important;
+        }
+
+        @include md {
+            margin: 0 !important;
+        }
     }
 
     .appoinment-form {
         background: #1ebeb6;
         padding: 12% 5%;
         position: relative;
+
+        @include lg {
+            margin-left: 30px;
+            margin-top: 11%;
+        }
+
+        @include md {
+            margin-top: 5%;
+        }
 
         h4 {
             text-transform: capitalize;
@@ -62,6 +83,26 @@
             padding: 23px 25px;
             color: #ffffff;
         }
+
+        .form-control-name,
+        .form-control-phone {
+            @include lg {
+                width: 97%;
+                margin-left: 10px;
+            }
+
+            @include md {
+                width: 100%;
+                margin: 0;
+            }
+        }
+
+        .department-select {
+            @include md {
+                margin-top: 15px;
+            }
+        }
+
 
         ::placeholder {
             color: white;
@@ -101,6 +142,11 @@
                     color: black;
                 }
             }
+
+            &::after {
+                border-bottom: 2px solid white;
+                border-right: 2px solid white;
+            }
         }
 
         &::after {
@@ -113,6 +159,10 @@
             background: #1ebeb6;
             z-index: -1;
             opacity: 0.2;
+
+            @include md {
+                display: none;
+            }
         }
     }
 }

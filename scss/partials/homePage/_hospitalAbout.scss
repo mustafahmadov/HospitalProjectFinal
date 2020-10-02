@@ -16,12 +16,24 @@
         position: relative;
         padding-right: 50px;
 
+        @include lg {
+            padding-right: 0 !important;
+        }
+
         .hospital-intro {
             background-color: white;
             padding: 47px 30px;
             position: absolute;
             bottom: -10%;
             left: 17%;
+
+            @include md {
+                position: relative;
+                left: 0;
+                top: 25px;
+                bottom: 0;
+                flex-direction: column;
+            }
 
             .video {
                 a {
@@ -54,10 +66,21 @@
                 margin-top: 1%;
                 padding-left: 4%;
 
+                @include md {
+                    text-align: center;
+                    margin-top: 5%;
+                }
+
                 h5 {
                     font-weight: 600;
                     margin-bottom: 15px;
                     font-size: 19px;
+
+                    @include md {
+                        font-size: 16px;
+                        line-height: 1.4;
+                        color: #233645;
+                    }
                 }
 
                 p {
@@ -73,6 +96,14 @@
 
     .about-hospital-content {
         padding-left: 27px;
+
+        @include lg {
+            margin-top: 15%;
+        }
+
+        @include md {
+            text-align: center;
+        }
 
         h5 {
             text-transform: uppercase;
@@ -92,6 +123,10 @@
             margin: 0;
             font-size: 32px;
 
+            @include md {
+                font-size: 26px;
+            }
+
         }
 
         p {
@@ -102,6 +137,30 @@
 
         ul {
             margin-top: 10px;
+
+            @include md {
+                justify-content: space-between;
+
+                li {
+                    margin-left: 0 !important;
+
+                }
+            }
+
+            @include sm {
+                flex-direction: column;
+                align-items: center;
+
+                li {
+                    &:nth-child(2) {
+                        margin-top: 4%;
+                    }
+                }
+            }
+
+            p {
+                font-size: 18px;
+            }
         }
 
         .icon {
@@ -124,7 +183,7 @@
             transition: all 0.35s ease-in-out;
             z-index: -1;
             display: inline-block;
-            padding: 17px 32px;
+            padding: 15px 28px;
             color: white;
             border-radius: 5px;
             font-weight: 700;

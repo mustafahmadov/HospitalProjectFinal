@@ -1,7 +1,7 @@
 .carousel-zoom {
     overflow: hidden;
 
-    @keyframes bgZoom {
+    @keyframes zoomImage {
         0% {
             transform: scale(1, 1);
         }
@@ -15,6 +15,10 @@
         max-height: 700px;
         overflow: hidden;
         border: 1px solid transparent;
+
+        @include md {
+            height: 350px;
+        }
     }
 
     .carousel-first-image {
@@ -24,11 +28,15 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        animation: bgZoom 20s infinite;
+        animation: zoomImage 20s infinite;
         position: relative;
         overflow: hidden;
         border: 1px solid transparent;
         z-index: 0;
+
+        @include md {
+            height: 350px;
+        }
     }
 
     .carousel-content {
@@ -37,6 +45,7 @@
         left: 10%;
         overflow: hidden;
         border: 1px solid transparent;
+        z-index: 15;
     }
 
     .carousel-second-image {
@@ -50,6 +59,10 @@
         animation: bgZoom 20s infinite;
         overflow: hidden;
         border: 1px solid transparent;
+
+        @include md {
+            height: 350px;
+        }
     }
 
     .black-background {
@@ -85,6 +98,10 @@
             strong {
                 display: block;
                 font-weight: 900;
+            }
+
+            @include md {
+                font-size: 36px;
             }
         }
 

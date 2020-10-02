@@ -59,17 +59,18 @@
     <!-- ===========HEADER START =========== -->
     <header id="header">
         <div class="wrap">
-            <nav class="navbar navbar-expand-lg navbar-light p-0 shadow-sm">
-                <div class="container">
-
-                    <a class="navbar-brand" href="#">
-                        <img src="img/logo.png" alt="page-logo" class="img-fluid">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
+            <nav class="navbar navbar-expand-lg navbar-light shadow-sm relative">
+                <div class="container relative">
+                    <div class="page-logo relative">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <a class="navbar-brand" href="#">
+                            <img src="img/logo.png" alt="page-logo" class="img-fluid">
+                        </a>
+                    </div>
                     <div class="collapse navbar-collapse justify-content-around" id="navbarNavDropdown">
                         <ul class="navbar-nav">
                             <li class="nav-item dropdown">
@@ -132,8 +133,6 @@
                             </li>
                         </ul>
                     </div>
-
-
                     <div class="emergency-content">
                         <ul>
                             <li>
@@ -147,10 +146,10 @@
                         </ul>
                     </div>
                 </div>
-
             </nav>
         </div>
     </header>
+
     <!-- ===========HEADER END =========== -->
 
 
@@ -162,28 +161,37 @@
                 <!--==== FIRST CAROUSEL ITEM ===-->
                 <div class="carousel-item active relative">
 
-                    <div class="carousel-first-image d-flex align-items-center justify-content-center">
+                    <div class="carousel-first-image ">
                         <div class="black-background"></div>
+
                     </div>
                     <div class="carousel-content">
                         <div class="container">
-                            <div class="content">
-                                <h4 class="animate__animated animate__slideInDown delay-1s">Best
-                                    Institution,
-                                    Good
-                                    Services</h4>
-                                <h2 class="animate__animated animate__slideInRight delay-2s">Meet the
-                                    <strong>Best Hospital</strong> </h2>
-                                <a class="animate__animated animate__fadeInUp delay-1s" class="btn btn-md btn-gradient"
-                                    href="#"><i class="fas fa-angle-right"></i>Discover More</a>
+                            <div class="row">
+                                <div class="col-lg-9">
+                                    <div class="content">
+                                        <h4 class="animate__animated animate__slideInDown delay-1s">Best
+                                            Institution,
+                                            Good
+                                            Services</h4>
+                                        <h2 class="animate__animated animate__slideInRight delay-2s">Meet the
+                                            <strong>Best Hospital</strong> </h2>
+                                        <a class="animate__animated animate__fadeInUp delay-1s"
+                                            class="btn btn-md btn-gradient" href="#"><i
+                                                class="fas fa-angle-right"></i>Discover More</a>
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
                     </div>
+
                 </div>
                 <!--==== SECOND CAROUSEL ITEM ===-->
                 <div class="carousel-item relative">
-                    <div class="carousel-second-image d-flex align-items-center justify-content-center">
+                    <div class="carousel-second-image">
                         <div class="black-background"></div>
+
                     </div>
                     <div class="carousel-content">
                         <div class="container">
@@ -201,6 +209,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
@@ -238,7 +247,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="emergency-item text-center">
+                    <div class="emergency-item emergency-second text-center">
                         <i class="fas fa-ribbon"></i>
                         <h4>Emergency Case</h4>
                         <p>Few preferred continual sir led incommode neglected. Discovered too old insensible collecting
@@ -258,7 +267,7 @@
     <!-- =========== ABOUT HOSPITAL START =========== -->
     <section class="about-hospital bg-gray">
         <div class="back-image">
-            <img src="img/1.png" alt="hospital">
+            <img src="img/1.png" alt="hospital" class="img-fluid">
         </div>
         <div class="container">
             <div class="row">
@@ -294,7 +303,7 @@
                                     <p class="m-0">Online Appoinment</p>
                                 </div>
                             </li>
-                            <li class="ml-5 d-flex">
+                            <li class="d-flex ml-5">
                                 <div class="icon">
                                     <i class="fas fa-pills"></i>
                                 </div>
@@ -465,19 +474,19 @@
                         <form class="mt-4">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Name">
+                                    <input type="text" class="form-control form-control-name" placeholder="Name">
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Phone">
+                                    <input type="text" class="form-control form-control-phone" placeholder="Phone">
                                 </div>
                             </div>
                             <div class="left-right-padding">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <select style="width: 100%;">
+                                            <select>
                                                 <option value="1" selected>Male</option>
                                                 <option value="2">Female</option>
                                                 <option value="3">Child</option>
@@ -486,7 +495,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <select style="width: 100%;">
+                                            <select class="department-select">
                                                 <option value="1" selected>Department</option>
                                                 <option value="2">Medecine</option>
                                                 <option value="3">Dental Care</option>
@@ -525,26 +534,24 @@
 
     <!-- ===========DOCTOR LISTS START =========== -->
     <section class="doctor-lists">
-        <div class="container-fluid pl-0">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="doctor-list-back">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="doctor-list-back">
 
-                    </div>
                 </div>
-                <div class="col-lg-6 common-style">
-                    <div class="doctor-list-content">
-                        <h4>At Our Clinic</h4>
-                        <h2>Our Doctors <br> Specialize in you.</h2>
-                        <p>Respect forming clothes do in he. Course so piqued no an by appear. Themselves reasonable
-                            pianoforte so motionless he as difficulty be. Abode way begin ham there power whole. Suppose
-                            neither evident welcome</p>
-                        <p>Do unpleasing indulgence impossible to conviction. Suppose neither evident welcome it at do
-                            civilly uncivil. Sing tall much you get nor.</p>
-                        <a class="btn btn-md btn-gradient mt-3" href="#"><i class="fas fa-angle-right"></i>
-                            Doctor Lists
-                        </a>
-                    </div>
+            </div>
+            <div class="col-lg-6 common-style">
+                <div class="doctor-list-content">
+                    <h4>At Our Clinic</h4>
+                    <h2>Our Doctors <br> Specialize in you.</h2>
+                    <p>Respect forming clothes do in he. Course so piqued no an by appear. Themselves reasonable
+                        pianoforte so motionless he as difficulty be. Abode way begin ham there power whole. Suppose
+                        neither evident welcome</p>
+                    <p>Do unpleasing indulgence impossible to conviction. Suppose neither evident welcome it at do
+                        civilly uncivil. Sing tall much you get nor.</p>
+                    <a class="btn btn-md btn-gradient mt-3" href="#"><i class="fas fa-angle-right"></i>
+                        Doctor Lists
+                    </a>
                 </div>
             </div>
         </div>
@@ -595,47 +602,53 @@
                     <!-- ==== CARDIOLOG ITEM START ==== -->
                     <div id="cardiolog" class="doctor-area cardiolog active animate__animated animate__fadeIn">
                         <div class="row">
-                            <div class="d-flex">
-                                <div class="col-lg-6">
-                                    <img src="img/doctor1.jpg" alt="doctor" class="img-fluid">
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="doctor-item">
-                                        <h3>Dr. Jonathom Doe</h3>
-                                        <span>MBBS, BMBS, MBChB, MBBCh</span>
-                                        <p>Delightful unreserved impossible few estimating men favourable see
-                                            entreaties.
-                                            She
-                                            propriety immediate was improving. He or entrance humoured likewise
-                                            moderate.
-                                        </p>
-                                        <a class="btn btn-md btn-gradient mt-3" href="#">
-                                            <i class="fas fa-angle-right"></i>
-                                            Read More
-                                        </a>
+                            <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <img src="img/doctor1.jpg" alt="doctor" class="img-fluid">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="doctor-item">
+                                            <h3>Dr. Jonathom Doe</h3>
+                                            <span>MBBS, BMBS, MBChB, MBBCh</span>
+                                            <p>Delightful unreserved impossible few estimating men favourable see
+                                                entreaties.
+                                                She
+                                                propriety immediate was improving. He or entrance humoured likewise
+                                                moderate.
+                                            </p>
+                                            <a class="btn btn-md btn-gradient mt-3" href="#">
+                                                <i class="fas fa-angle-right"></i>
+                                                Read More
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
+
                             </div>
-                            <div class="d-flex mt-4">
-                                <div class="col-lg-6">
-                                    <img src="img/doctor5.jpg" alt="doctor" class="img-fluid">
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="doctor-item">
-                                        <h3>Dr. Jonathom Doe</h3>
-                                        <span>MBBS, BMBS, MBChB, MBBCh</span>
-                                        <p>Delightful unreserved impossible few estimating men favourable see
-                                            entreaties.
-                                            She
-                                            propriety immediate was improving. He or entrance humoured likewise
-                                            moderate.
-                                        </p>
-                                        <a class="btn btn-md btn-gradient mt-3" href="#">
-                                            <i class="fas fa-angle-right"></i>
-                                            Read More
-                                        </a>
+                            <div class="col-lg-12 mt-4">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <img src="img/doctor5.jpg" alt="doctor" class="img-fluid">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="doctor-item">
+                                            <h3>Dr. Jonathom Doe</h3>
+                                            <span>MBBS, BMBS, MBChB, MBBCh</span>
+                                            <p>Delightful unreserved impossible few estimating men favourable see
+                                                entreaties.
+                                                She
+                                                propriety immediate was improving. He or entrance humoured likewise
+                                                moderate.
+                                            </p>
+                                            <a class="btn btn-md btn-gradient mt-3" href="#">
+                                                <i class="fas fa-angle-right"></i>
+                                                Read More
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
+
                             </div>
 
                         </div>
@@ -722,67 +735,64 @@
 
     <!-- ===========TESTIMONIALS START =========== -->
     <section class="testimonials">
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <div class="col-lg-5">
-                    <div class="testimonial-header">
-                        <h5>TESTIMONIALS</h5>
-                        <h2>
-                            Whay people says <br />
-                            about our services
-                        </h2>
-                        <a href="#"><i class="fas fa-angle-right"></i>Viewl All</a>
-                    </div>
+        <div class="row align-items-center">
+            <div class="col-lg-5">
+                <div class="testimonial-header">
+                    <h5>TESTIMONIALS</h5>
+                    <h2>
+                        Whay people says <br />
+                        about our services
+                    </h2>
+                    <a href="#"><i class="fas fa-angle-right"></i>Viewl All</a>
                 </div>
-                <div class="col-lg-7">
-                    <div class="carousel owl-carousel owl-theme testimonial-carousel">
-                        <!--==== FIRST CAROUSEL ITEM ===-->
-                        <div class="item">
-                            <div class="item-img">
-                                <img class="img-fluid" src="img/testimonials1.jpg" alt="" />
-                            </div>
-                            <div class="item-content">
-                                <h5>Jonathom Doe</h5>
-                                <span>patient of <strong>surgery</strong></span>
-                                <p>
-                                    Totally dearest expense on demesne ye he. Curiosity
-                                    excellent commanded in me. Unpleasing.
-                                </p>
-                            </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="carousel owl-carousel owl-theme testimonial-carousel">
+                    <!--==== FIRST CAROUSEL ITEM ===-->
+                    <div class="item">
+                        <div class="item-img">
+                            <img class="img-fluid" src="img/testimonials1.jpg" alt="" />
                         </div>
-                        <!--==== SECOND CAROUSEL ITEM ===-->
-                        <div class="item">
-                            <div class="item-img">
-                                <img class="img-fluid" src="img/testimonials2.jpg" alt="" />
-                            </div>
-                            <div class="item-content">
-                                <h5>Jonathom Doe</h5>
-                                <span>patient of <strong>surgery</strong></span>
-                                <p>
-                                    Totally dearest expense on demesne ye he. Curiosity
-                                    excellent commanded in me. Unpleasing.
-                                </p>
-                            </div>
+                        <div class="item-content">
+                            <h5>Jonathom Doe</h5>
+                            <span>patient of <strong>surgery</strong></span>
+                            <p>
+                                Totally dearest expense on demesne ye he. Curiosity
+                                excellent commanded in me. Unpleasing.
+                            </p>
                         </div>
-                        <!--==== THIRD CAROUSEL ITEM ===-->
-                        <div class="item">
-                            <div class="item-img">
-                                <img class="img-fluid" src="img/testimonials3.jpg" alt="" />
-                            </div>
-                            <div class="item-content">
-                                <h5>Jonathom Doe</h5>
-                                <span>patient of <strong>surgery</strong></span>
-                                <p>
-                                    Totally dearest expense on demesne ye he. Curiosity
-                                    excellent commanded in me. Unpleasing.
-                                </p>
-                            </div>
+                    </div>
+                    <!--==== SECOND CAROUSEL ITEM ===-->
+                    <div class="item">
+                        <div class="item-img">
+                            <img class="img-fluid" src="img/testimonials2.jpg" alt="" />
+                        </div>
+                        <div class="item-content">
+                            <h5>Jonathom Doe</h5>
+                            <span>patient of <strong>surgery</strong></span>
+                            <p>
+                                Totally dearest expense on demesne ye he. Curiosity
+                                excellent commanded in me. Unpleasing.
+                            </p>
+                        </div>
+                    </div>
+                    <!--==== THIRD CAROUSEL ITEM ===-->
+                    <div class="item">
+                        <div class="item-img">
+                            <img class="img-fluid" src="img/testimonials3.jpg" alt="" />
+                        </div>
+                        <div class="item-content">
+                            <h5>Jonathom Doe</h5>
+                            <span>patient of <strong>surgery</strong></span>
+                            <p>
+                                Totally dearest expense on demesne ye he. Curiosity
+                                excellent commanded in me. Unpleasing.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </section>
     <!-- ===========TESTIMONIALS END =========== -->
 
@@ -805,7 +815,7 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6">
                     <!-- FIRST BLOG ITEM -->
                     <div class="blog-item shadow-sm">
                         <div class="blog-item-img">
@@ -839,7 +849,7 @@
                     </div>
 
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6">
                     <!-- SECOND BLOG ITEM -->
                     <div class="blog-item shadow-sm">
                         <div class="blog-item-img">
@@ -872,7 +882,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6">
                     <!-- THIRD BLOG ITEM -->
                     <div class="blog-item shadow-sm">
                         <div class="blog-item-img">
@@ -919,26 +929,18 @@
                     <div class="help-form-image">
                         <div class="contacts">
                             <ul>
-                                <div class="row">
-                                    <div class="col-lg-6 p-0">
-                                        <li>
-                                            <h5>
-                                                <img src="img/001-telephone.svg" alt="telephone">phone
-                                            </h5>
-                                            <span>+44-20-7328-4499</span>
-                                        </li>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <li>
-                                            <h5>
-                                                <img src="img/002-email.svg" alt="email">email
-                                            </h5>
-                                            <span>info@healdi.com</span>
-                                        </li>
-                                    </div>
-                                </div>
-
-
+                                <li>
+                                    <h5>
+                                        <img src="img/001-telephone.svg" alt="telephone">phone
+                                    </h5>
+                                    <span>+44-20-7328-4499</span>
+                                </li>
+                                <li>
+                                    <h5>
+                                        <img src="img/002-email.svg" alt="email">email
+                                    </h5>
+                                    <span>info@healdi.com</span>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -986,6 +988,7 @@
     </section>
     <!-- ===========HELP FORM END =========== -->
 
+    <!-- ===========FOOTER START =========== -->
     <footer>
         <div class="container">
             <div class="row">
@@ -1019,9 +1022,9 @@
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6">
-                    <div class="departments">
+                    <div class="departments ">
                         <h4>Departments</h4>
-                        <ul>
+                        <ul class="ml-3">
                             <li>Medecine & Health</li>
                             <li>Dental Care</li>
                             <li>Eye Treatment</li>
@@ -1032,9 +1035,9 @@
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6">
-                    <div class="usefull-links ml-3">
+                    <div class="usefull-links">
                         <h4>Usefull Links</h4>
-                        <ul>
+                        <ul class="ml-3">
                             <li>Ambulance</li>
                             <li>Emergency</li>
                             <li>Blog</li>
@@ -1086,6 +1089,7 @@
             </div>
         </div>
     </footer>
+    <!-- ===========FOOTER END =========== -->
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="js/jquery.nice-select.js"></script>

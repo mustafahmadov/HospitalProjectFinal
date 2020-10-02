@@ -1,6 +1,14 @@
 .doctor-lists {
     background-color: white;
     overflow: hidden;
+    height: 780px;
+
+    @include lg {
+        max-width: 720px;
+        margin: auto;
+        padding: 0 15px;
+        height: 900px;
+    }
 
     .doctor-list-back {
         background: url('../img/doctorlist.jpg');
@@ -8,6 +16,11 @@
         background-repeat: no-repeat;
         background-size: cover;
         height: 780px;
+
+        @include lg {
+            height: 300px;
+
+        }
     }
 
     .common-style {
@@ -22,6 +35,12 @@
             top: 15%;
             border-bottom: 3px solid #1ebeb6;
 
+            @include lg {
+                left: 0;
+                top: 0;
+                padding: 50px 30px;
+            }
+
             h4 {
                 color: #1ebeb6;
                 text-transform: capitalize;
@@ -30,12 +49,20 @@
                 position: relative;
                 margin-bottom: 25px;
                 font-size: 1.25rem;
+
+                @include md {
+                    font-size: 16px;
+                }
             }
 
             h2 {
                 font-weight: 600;
                 margin-bottom: 25px;
                 color: #233645;
+
+                @include md {
+                    font-size: 26px;
+                }
             }
 
             p {
@@ -43,6 +70,7 @@
                 margin: 0 0 15px;
                 text-transform: none;
                 font-weight: 400;
+                font-size: 15px;
             }
 
             a {
@@ -50,10 +78,11 @@
                 transition: all 0.35s ease-in-out;
                 z-index: -1;
                 display: inline-block;
-                padding: 17px 32px;
+                padding: 14px 28px;
                 color: white;
                 border-radius: 5px;
                 font-weight: 700;
+                border: none;
 
                 i {
                     height: 30px;

@@ -1,0 +1,132 @@
+.help-form {
+    padding: 120px 0;
+    height: 100%;
+
+    .help-form-image {
+        height: 460px;
+        width: 100%;
+        background: url('../img/help.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+
+        @include md {
+            height: 396px;
+        }
+
+        @include sm {
+            width: 92%;
+            margin-left: 4%;
+        }
+
+        .contacts {
+            background-color: white;
+            position: absolute;
+            padding: 36px 30px 17px 30px;
+            bottom: -1px;
+            left: 30px;
+            width: 90%;
+            display: flex;
+            justify-content: space-evenly;
+
+            @include md {
+                bottom: -30px;
+                box-shadow: 0 0 10px #e7e7e7;
+            }
+
+            @include sm {
+                left: 15px;
+            }
+
+            ul {
+                display: flex;
+                justify-content: space-evenly;
+
+                @include md {
+                    flex-direction: column;
+                }
+
+                li {
+                    &:nth-child(1) {
+                        @include md {
+                            margin-bottom: 20px;
+                        }
+                    }
+
+                    padding: 0 30px;
+
+                    h5 {
+                        text-transform: uppercase;
+                        font-size: 18px;
+                        font-weight: 600;
+                        color: #233645;
+
+                        img {
+                            width: 37px;
+                            height: 30px;
+                            margin-right: 4%;
+                        }
+                    }
+
+                    span {
+                        font-size: 15px;
+                        font-weight: 400;
+                        line-height: 30px;
+                        color: #666666;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    .help-form-area {
+        margin-left: 6%;
+
+        @include md {
+            margin-top: 20%;
+            margin-left: 0;
+        }
+
+        h2 {
+            color: #233645;
+            font-weight: 600;
+
+            @include sm {
+                text-align: center;
+                font-size: 26px;
+            }
+
+            strong {
+                display: block;
+                color: #1ebeb6;
+                margin-top: 5px;
+                font-weight: 700;
+            }
+        }
+
+        form {
+
+            input,
+            textarea {
+                border: none !important;
+                border-bottom: 1px solid #e7e7e7 !important;
+                box-shadow: none !important;
+                margin-top: 3%;
+            }
+
+            button {
+                background: linear-gradient(90deg, rgba(30, 190, 182, 1) 0%, rgba(0, 130, 124, 1) 100%);
+                padding: 12px 35px;
+                border-radius: 30px;
+                color: #ffffff;
+                font-weight: 700;
+                border: none;
+                margin-top: 15px;
+            }
+        }
+    }
+
+}
