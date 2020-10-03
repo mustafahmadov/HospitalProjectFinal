@@ -109,8 +109,23 @@ header {
 
         .dropdown-menu {
           border: none !important;
+          padding-bottom: 1px;
+          padding-top: 0;
+          border-radius: 4px;
 
           .dropdown-item {
+            color: #333333;
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 14px 10px;
+            border-bottom: solid 1px #e0e0e0;
+            -webkit-transition: all 0.35s ease-in-out;
+
+            &:hover {
+              color: #1ebeb6;
+            }
+
             @include lg {
               padding: 13px 13px !important;
               color: #333333;
@@ -181,6 +196,10 @@ header {
       i {
         color: black !important;
       }
+
+      @include lg {
+        display: list-item;
+      }
     }
 
     @include lg {
@@ -191,10 +210,8 @@ header {
       padding-left: 15px;
     }
 
-    @include md {
-    }
+    @include md {}
 
-    @include sm {
-    }
+    @include sm {}
   }
 }
