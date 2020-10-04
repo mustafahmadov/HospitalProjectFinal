@@ -62,26 +62,27 @@ $(document).ready(function () {
     let btns = $(".btn-filter");
     btns.click(function (e) {
         e.preventDefault();
-        let attribute = $(this).attr('data-target');
+        let attribute = $(this).attr("data-target");
         $(".btn-filter").removeClass("active");
-        $(".btn-filter").removeClass('default');
-        $(".nav-link").removeClass('default-white');
+        $(".btn-filter").removeClass("default");
+        $(".nav-link").removeClass("default-white");
         $(this).addClass("active");
-        $(this).addClass('default');
-        if ($(this).hasClass('active')) {
-            $(this).addClass('default');
-            $(this).children().addClass('default-white');
+        $(this).addClass("default");
+        if ($(this).hasClass("active")) {
+            $(this).addClass("default");
+            $(this).children().addClass("default-white");
         }
 
-
-        $('.doctor-area').not('.' + attribute).hide(1000);
-        $('.doctor-area').filter('.' + attribute).show(1000);
-        if ($('.doctor-area').hasClass('d-none')) {
-            $('.doctor-area').removeClass('d-none');
+        $(".doctor-area")
+            .not("." + attribute)
+            .hide(1000);
+        $(".doctor-area")
+            .filter("." + attribute)
+            .show(1000);
+        if ($(".doctor-area").hasClass("d-none")) {
+            $(".doctor-area").removeClass("d-none");
         }
-
     });
-    console.log($('.navbar-brand').css('position'));
     // if ($('.navbar-toggler').css("display") === "none") {
     //     $(".nav-link").mouseover(
     //         function () {
@@ -102,4 +103,26 @@ $(document).ready(function () {
     //         }
     //     )
     // }
+    // let counter = (element) => {
+    //     let count = 0;
+    //     let countTo = $(element).attr('data-to');
+    //     let intervalSecond = Math.round((((50 / countTo) * 100)) * 100)
+    //     console.log(Math.round(((50 / countTo) * 100)));
+    //     let interval = setInterval(
+    //         function counterUp() {
+    //             count++;
+    //             $(element).html(count);
+    //             if (count == countTo) {
+    //                 clearInterval(interval);
+    //             }
+    //         }, intervalSecond)
+
+    // }
+    // counter('.count-item1');
+    // counter('.count-item2');
+    // counter('.count-item3');
+    // counter('.count-item4');
+    // $(".count-item").countTo();
+    let countNumber = `${$('.count-item').countTo()}`
+    $('.count-item').html(countNumber);
 });

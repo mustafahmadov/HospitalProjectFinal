@@ -2497,3 +2497,65 @@ footer .footer-bottom .social-medias ul li a i {
   font-size: 15px;
   margin-top: 15px;
 }
+
+.departments-services {
+  padding-bottom: 300px;
+}
+
+.departments-consultation {
+  padding: 0;
+  position: relative;
+  bottom: 100px;
+}
+
+.count-area {
+  position: relative;
+  top: -235px;
+}
+
+.count-area .count {
+  position: relative;
+  background: linear-gradient(90deg, #1ebeb6 0%, #00827c 100%);
+  padding: 120px 50px;
+}
+
+.count-area .count::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: url("../../../img/9.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 1;
+  opacity: 0.3;
+}
+
+.count-area .count .count-item {
+  font-size: 40px;
+  font-weight: 800;
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+.count-area .count .count-item::after {
+  position: absolute;
+  content: "\f067";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  font-size: 20px;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+.count-area .count span {
+  display: block;
+  margin-top: 10px;
+  text-transform: capitalize;
+  font-weight: 700;
+  color: white;
+}

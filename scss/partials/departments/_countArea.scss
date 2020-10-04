@@ -1,0 +1,61 @@
+.departments-services {
+    padding-bottom: 300px;
+}
+
+.departments-consultation {
+    padding: 0;
+    position: relative;
+    bottom: 100px;
+}
+
+.count-area {
+    position: relative;
+    top: -235px;
+
+    .count {
+        position: relative;
+        background: linear-gradient(90deg, rgba(30, 190, 182, 1) 0%, rgba(0, 130, 124, 1) 100%);
+        padding: 120px 50px;
+
+        &::after {
+            position: absolute;
+            left: 0;
+            top: 0;
+            content: "";
+            height: 100%;
+            width: 100%;
+            background: url('../../../img/9.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            z-index: 1;
+            opacity: 0.3;
+        }
+
+        .count-item {
+            font-size: 40px;
+            font-weight: 800;
+            position: relative;
+            z-index: 1;
+            color: white;
+
+            &::after {
+                position: absolute;
+                content: "\f067";
+                font-family: "Font Awesome 5 Free";
+                font-weight: 600;
+                font-size: 20px;
+                transform: translateY(-50%);
+                top: 50%;
+            }
+        }
+
+        span {
+            display: block;
+            margin-top: 10px;
+            text-transform: capitalize;
+            font-weight: 700;
+            color: white;
+        }
+    }
+}
