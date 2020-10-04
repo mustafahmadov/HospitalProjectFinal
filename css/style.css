@@ -143,11 +143,12 @@ header .wrap nav .navbar-brand {
 
 header .wrap .navbar-nav .nav-item {
   margin-left: 2%;
+  margin-left: 0 !important;
 }
 
-@media (max-width: 1199.98px) {
-  header .wrap .navbar-nav .nav-item {
-    margin-left: 0 !important;
+@media (min-width: 992px) {
+  header .wrap .navbar-nav .nav-item:hover .dropdown-menu {
+    display: block;
   }
 }
 
@@ -211,6 +212,8 @@ header .wrap .navbar-nav .nav-item .dropdown-menu {
   padding-bottom: 1px;
   padding-top: 0;
   border-radius: 4px;
+  -webkit-transition: all 0.35s ease-in-out;
+  animation: fadeIn .8s;
 }
 
 header .wrap .navbar-nav .nav-item .dropdown-menu .dropdown-item {
@@ -315,8 +318,50 @@ header .page-logo .navbar-toggler i {
   }
 }
 
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
 .carousel-zoom {
   overflow: hidden;
+}
+
+.carousel-zoom .carousel-control-prev-icon {
+  display: none;
+  width: 35px;
+  height: 35px;
+}
+
+.carousel-zoom:hover .carousel-control-prev-icon {
+  animation: fadeInLeft 0.7s;
+  display: block;
 }
 
 @keyframes zoomImage {
@@ -451,6 +496,28 @@ header .page-logo .navbar-toggler i {
   margin-left: 0;
   margin-right: 5px;
   text-align: center;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(40px);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .emergency-case-area {
@@ -1195,6 +1262,34 @@ header .page-logo .navbar-toggler i {
   text-transform: none;
   font-weight: 400;
   font-size: 15px;
+  line-height: 30px;
+  margin-top: 10px;
+}
+
+.doctor-lists .common-style .doctor-list-content ul li {
+  width: 50%;
+  float: left;
+  padding: 0 15px;
+  width: 50%;
+  margin-top: 20px;
+  padding-left: 35px;
+  position: relative;
+  z-index: 1;
+}
+
+.doctor-lists .common-style .doctor-list-content ul li h5 {
+  font-weight: 600;
+  color: #233645;
+}
+
+.doctor-lists .common-style .doctor-list-content ul li::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  color: #1ebeb6;
+  font-weight: 600;
 }
 
 .doctor-lists .common-style .doctor-list-content a {
@@ -2291,4 +2386,106 @@ footer .footer-bottom .social-medias ul li a i {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.about-us-doctors {
+  padding-top: 120px;
+  padding-bottom: 90px;
+  background-color: #f7f7f7;
+}
+
+.about-us-doctors .about-us-doctors-header .long-divider {
+  display: inline-block;
+  width: 40px;
+  height: 1px;
+  background-color: #1ebeb6;
+}
+
+.about-us-doctors .about-us-doctors-header .short-divider {
+  display: inline-block;
+  background-color: #1ebeb6;
+  width: 5px;
+  height: 1px;
+}
+
+.about-us-doctors .about-us-doctors-header h4 {
+  color: #1ebeb6;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 23px;
+}
+
+.about-us-doctors .about-us-doctors-header h2 {
+  font-weight: 600;
+  padding-bottom: 20px;
+  margin-bottom: 0;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #233645;
+  font-size: 2rem;
+}
+
+.about-us-doctors .about-us-doctors-header p {
+  color: #666666;
+  margin: 0 0 15px;
+  text-transform: none;
+  font-weight: 400;
+  text-align: center;
+  padding: 0 5%;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.about-us-doctors .about-doctor-item .doctor-img {
+  position: relative;
+}
+
+.about-us-doctors .about-doctor-item .doctor-img .doctor-contact {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -25px;
+  background: linear-gradient(90deg, #1ebeb6 0%, #00827c 100%);
+  padding: 11px 25px;
+  border-radius: 30px;
+}
+
+.about-us-doctors .about-doctor-item .doctor-img .doctor-contact a:nth-child(1) {
+  margin-right: 30px;
+  position: relative;
+}
+
+.about-us-doctors .about-doctor-item .doctor-img .doctor-contact a:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 18px;
+  background-color: white;
+  right: -18px;
+  top: 1px;
+}
+
+.about-us-doctors .about-doctor-item .doctor-img .doctor-contact a i {
+  color: white;
+}
+
+.about-us-doctors .about-doctor-item .doctor-content {
+  padding: 50px 30px 30px 30px;
+  background-color: white;
+}
+
+.about-us-doctors .about-doctor-item .doctor-content h5 {
+  color: #233645;
+  font-weight: 600;
+}
+
+.about-us-doctors .about-doctor-item .doctor-content span {
+  color: #1ebeb6;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 15px;
+  margin-top: 15px;
 }

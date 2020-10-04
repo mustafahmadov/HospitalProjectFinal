@@ -1,0 +1,113 @@
+.about-us-doctors {
+    padding-top: 120px;
+    padding-bottom: 90px;
+    background-color: #f7f7f7;
+
+    .about-us-doctors-header {
+        .long-divider {
+            display: inline-block;
+            width: 40px;
+            height: 1px;
+            background-color: #1ebeb6;
+        }
+
+        .short-divider {
+            display: inline-block;
+            background-color: #1ebeb6;
+            width: 5px;
+            height: 1px;
+        }
+
+        h4 {
+            color: #1ebeb6;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 23px;
+        }
+
+        h2 {
+            font-weight: 600;
+            padding-bottom: 20px;
+            margin-bottom: 0;
+            text-transform: capitalize;
+            letter-spacing: 1px;
+            text-align: center;
+            color: #233645;
+            font-size: 2rem;
+        }
+
+        p {
+            color: #666666;
+            margin: 0 0 15px;
+            text-transform: none;
+            font-weight: 400;
+            text-align: center;
+            padding: 0 5%;
+            font-size: 15px;
+            line-height: 30px;
+        }
+
+
+    }
+
+    .about-doctor-item {
+        .doctor-img {
+            position: relative;
+
+            .doctor-contact {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -25px;
+                background: linear-gradient(90deg, rgba(30, 190, 182, 1) 0%, rgba(0, 130, 124, 1) 100%);
+                padding: 11px 25px;
+                border-radius: 30px;
+
+                a {
+
+                    &:nth-child(1) {
+                        margin-right: 30px;
+                        position: relative;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            width: 1px;
+                            height: 18px;
+                            background-color: white;
+                            right: -18px;
+                            top: 1px;
+                        }
+                    }
+
+                    i {
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .doctor-content {
+            padding: 50px 30px 30px 30px;
+            background-color: white;
+
+            h5 {
+                color: #233645;
+                font-weight: 600;
+            }
+
+            span {
+                color: #1ebeb6;
+                text-transform: capitalize;
+                font-weight: 600;
+                font-size: 15px;
+                margin-top: 15px;
+            }
+
+            ;
+        }
+    }
+
+}
