@@ -1292,6 +1292,14 @@ header .page-logo .navbar-toggler i {
   font-weight: 600;
 }
 
+.doctor-lists .common-style .doctor-list-content ul li:nth-child(1) {
+  margin-top: 0;
+}
+
+.doctor-lists .common-style .doctor-list-content ul li:nth-child(2) {
+  margin-top: 0;
+}
+
 .doctor-lists .common-style .doctor-list-content a {
   background: linear-gradient(90deg, #1ebeb6 0%, #00827c 100%);
   transition: all 0.35s ease-in-out;
