@@ -14,6 +14,8 @@ a:hover {
 }
 
 @import '../scss/mixins';
+
+
 @import '../scss/partials/homePage/topPageArea';
 @import '../scss/partials/homePage/header';
 @import '../scss/partials/homePage/carouselZoom';
@@ -29,9 +31,11 @@ a:hover {
 @import '../scss/partials/homePage/footer';
 
 
-@import '../scss/mixins';
+
 @import '../scss/partials/aboutUs/breadcrumbArea';
 @import '../scss/partials/aboutUs/aboutUsServices';
 @import '../scss/partials/aboutUs/aboutUsDoctors';
 
 @import '../scss/partials/departments/countArea';
+
+@import '../scss/partials/blogThreeColumn/blog.scss';
