@@ -123,8 +123,7 @@ $(document).ready(function () {
     // counter('.count-item3');
     // counter('.count-item4');
     // $(".count-item").countTo();
-    let countNumber = `${$('.count-item').countTo()}`
-    $('.count-item').html(countNumber);
+
 
 
     var wow = new WOW({
