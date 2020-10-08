@@ -40,9 +40,9 @@ $(document).ready(function () {
             },
         },
     });
-    window.onscroll = function () {
-        myFunction();
-    };
+    $(window).scroll(function () {
+        makeStickyNav();
+    });
 
     // Get the header
     var nav = document.querySelector("header");
@@ -51,7 +51,7 @@ $(document).ready(function () {
     var sticky = header.offsetTop;
 
     // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-    function myFunction() {
+    function makeStickyNav() {
         if (window.pageYOffset > sticky) {
             nav.classList.add("sticky-top");
         } else {
@@ -59,7 +59,10 @@ $(document).ready(function () {
         }
     }
 
+
     $("select").niceSelect();
+
+
 
     let btns = $(".btn-filter");
     btns.click(function (e) {
@@ -85,49 +88,10 @@ $(document).ready(function () {
             $(".doctor-area").removeClass("d-none");
         }
     });
-    // if ($('.navbar-toggler').css("display") === "none") {
-    //     $(".nav-link").mouseover(
-    //         function () {
-    //             $(this).next().addClass('d-block');
-    //             $(this).next().addClass('active');
-    //         },
-    //     )
-    //     $('.nav-link').mouseleave(function () {
-    //         $(this).next().removeClass('d-block');
-    //         $(this).next().removeClass('active');
-    //         if (!($(this).next().hasClass('active'))) {
-    //             $(this).next().addClass('d-none');
-    //         }
-    //     })
-    //     $('.nav-link').next().hover(
-    //         function () {
-    //             $(this).toggleClass('d-block');
-    //         }
-    //     )
-    // }
-    // let counter = (element) => {
-    //     let count = 0;
-    //     let countTo = $(element).attr('data-to');
-    //     let intervalSecond = Math.round((((50 / countTo) * 100)) * 100)
-    //     console.log(Math.round(((50 / countTo) * 100)));
-    //     let interval = setInterval(
-    //         function counterUp() {
-    //             count++;
-    //             $(element).html(count);
-    //             if (count == countTo) {
-    //                 clearInterval(interval);
-    //             }
-    //         }, intervalSecond)
+    
 
-    // }
-    // counter('.count-item1');
-    // counter('.count-item2');
-    // counter('.count-item3');
-    // counter('.count-item4');
-    // $(".count-item").countTo();
 
     $(window).on('load', function () {
-        // Animate loader off screen
         $(".pre-icon").fadeOut("slow");
     });
 
