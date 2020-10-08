@@ -55,14 +55,27 @@ header {
 
       .nav-item {
         margin-left: 2%;
-
-
         margin-left: 0 !important;
 
         &:hover {
           @include cmntablet {
             .dropdown-menu {
               display: block;
+            }
+
+            .nav-link {
+              &::after {
+                transform: rotateX(180deg);
+              }
+            }
+          }
+        }
+
+        @include lg {
+          .nav-link {
+            &::after {
+              right: 0;
+              content: "\f105" !important;
             }
           }
         }

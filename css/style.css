@@ -13,6 +13,22 @@ a:hover {
   text-decoration: none;
 }
 
+.wrapper {
+  transition: all 0.3s ease-in-out;
+}
+
+.pre-icon {
+  background: url("../../../img/preloader.gif") no-repeat center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  text-align: center;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  background-color: white;
+}
+
 .top-page-area {
   padding: 18px 0;
   border-bottom: 1px solid #e7e7e7;
@@ -149,6 +165,16 @@ header .wrap .navbar-nav .nav-item {
 @media (min-width: 992px) {
   header .wrap .navbar-nav .nav-item:hover .dropdown-menu {
     display: block;
+  }
+  header .wrap .navbar-nav .nav-item:hover .nav-link::after {
+    transform: rotateX(180deg);
+  }
+}
+
+@media (max-width: 991.98px) {
+  header .wrap .navbar-nav .nav-item .nav-link::after {
+    right: 0;
+    content: "\f105" !important;
   }
 }
 
@@ -353,15 +379,40 @@ header .page-logo .navbar-toggler i {
   overflow: hidden;
 }
 
+@media (max-width: 991.98px) {
+  .carousel-zoom {
+    height: 753px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .carousel-zoom {
+    height: 350px;
+  }
+}
+
 .carousel-zoom .carousel-control-prev-icon {
-  display: none;
-  width: 35px;
-  height: 35px;
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  left: -80px;
+  transition: all 0.35s ease-in-out;
+}
+
+.carousel-zoom .carousel-control-next-icon {
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  right: -80px;
+  transition: all 0.35s ease-in-out;
 }
 
 .carousel-zoom:hover .carousel-control-prev-icon {
-  animation: fadeInLeft 0.7s;
-  display: block;
+  left: 20px;
+}
+
+.carousel-zoom:hover .carousel-control-next-icon {
+  right: 20px;
 }
 
 @keyframes zoomImage {
@@ -387,7 +438,7 @@ header .page-logo .navbar-toggler i {
 
 .carousel-zoom .carousel-first-image {
   background-image: url("../img/1.jpg");
-  height: 700px;
+  height: 753px;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -399,6 +450,12 @@ header .page-logo .navbar-toggler i {
   z-index: 0;
 }
 
+@media (max-width: 991.98px) {
+  .carousel-zoom .carousel-first-image {
+    height: 620px;
+  }
+}
+
 @media (max-width: 767.98px) {
   .carousel-zoom .carousel-first-image {
     height: 350px;
@@ -407,16 +464,37 @@ header .page-logo .navbar-toggler i {
 
 .carousel-zoom .carousel-content {
   position: absolute;
-  top: 30%;
-  left: 10%;
+  top: 0%;
+  padding-left: 10%;
   overflow: hidden;
   border: 1px solid transparent;
   z-index: 15;
+  height: 100%;
+  width: 75%;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 991.98px) {
+  .carousel-zoom .carousel-content {
+    padding-left: 4%;
+    left: 2%;
+    width: 80%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .carousel-zoom .carousel-content {
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    padding-left: 0%;
+  }
 }
 
 .carousel-zoom .carousel-second-image {
   background-image: url("../img/2.jpg");
-  height: 700px;
+  height: 753px;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -425,6 +503,12 @@ header .page-logo .navbar-toggler i {
   animation: bgZoom 20s infinite;
   overflow: hidden;
   border: 1px solid transparent;
+}
+
+@media (max-width: 991.98px) {
+  .carousel-zoom .carousel-second-image {
+    height: 620px;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -447,6 +531,30 @@ header .page-logo .navbar-toggler i {
 
 .carousel-zoom .content {
   z-index: 5;
+  position: relative;
+}
+
+.carousel-zoom .content::after {
+  position: absolute;
+  top: -95px;
+  left: -52px;
+  content: "\f21e";
+  font-family: "Font Awesome 5 Free";
+  height: 100%;
+  width: 350px;
+  color: #ffffff;
+  z-index: -1;
+  opacity: 0.2;
+  font-weight: 600;
+  font-size: 150px;
+}
+
+@media (max-width: 767.98px) {
+  .carousel-zoom .content::after {
+    left: 50%;
+    transform: translateX(-50%);
+    top: -84px;
+  }
 }
 
 .carousel-zoom .content h4 {
@@ -455,6 +563,12 @@ header .page-logo .navbar-toggler i {
   margin-bottom: 25px;
   font-size: 22px;
   color: white;
+}
+
+@media (max-width: 767.98px) {
+  .carousel-zoom .content h4 {
+    font-size: 18px;
+  }
 }
 
 .carousel-zoom .content h2 {
@@ -467,12 +581,12 @@ header .page-logo .navbar-toggler i {
 
 .carousel-zoom .content h2 strong {
   display: block;
-  font-weight: 900;
+  font-weight: 800;
 }
 
 @media (max-width: 767.98px) {
   .carousel-zoom .content h2 {
-    font-size: 36px;
+    font-size: 32px;
   }
 }
 
@@ -481,9 +595,10 @@ header .page-logo .navbar-toggler i {
   transition: all 0.35s ease-in-out;
   z-index: -1;
   display: inline-block;
-  padding: 17px 32px;
+  padding: 15px 27px;
   color: white;
   border-radius: 5px;
+  font-weight: 700;
 }
 
 .carousel-zoom .content a i {
@@ -842,6 +957,12 @@ header .page-logo .navbar-toggler i {
   position: relative;
 }
 
+@media (max-width: 767.98px) {
+  .services {
+    padding: 0;
+  }
+}
+
 .services .services-header .long-divider {
   display: inline-block;
   width: 40px;
@@ -998,15 +1119,34 @@ header .page-logo .navbar-toggler i {
   padding: 120px 0;
 }
 
+@media (max-width: 767.98px) {
+  .consultation {
+    padding-bottom: 60px;
+  }
+}
+
 .consultation h2 {
   font-weight: 600;
   margin-bottom: 25px;
   font-size: 32px;
 }
 
+@media (max-width: 767.98px) {
+  .consultation h2 {
+    text-align: center;
+    font-size: 26px;
+  }
+}
+
 .consultation p {
   font-size: 15px;
   margin-bottom: 32px;
+}
+
+@media (max-width: 767.98px) {
+  .consultation p {
+    text-align: center;
+  }
 }
 
 .consultation .flat-icons {
@@ -1066,6 +1206,7 @@ header .page-logo .navbar-toggler i {
 @media (max-width: 767.98px) {
   .consultation .appoinment-form {
     margin-top: 5%;
+    margin-left: 0;
   }
 }
 
@@ -1337,13 +1478,19 @@ header .page-logo .navbar-toggler i {
   opacity: 0.2;
 }
 
+@media (max-width: 991.98px) {
+  .doctor-lists .common-style .doctor-list-content::after {
+    display: none;
+  }
+}
+
 .doctors-filter {
   padding: 120px 0;
   background-color: #f7f7f7;
 }
 
 .doctors-filter .default {
-  background: #1ebeb6;
+  background: #1ebeb6 !important;
 }
 
 .doctors-filter .default-white {
@@ -1399,22 +1546,61 @@ header .page-logo .navbar-toggler i {
   cursor: pointer;
   display: flex;
   border: none;
-  padding: 20px 15px;
-  background: rgba(30, 190, 182, 0.1);
   border-radius: inherit;
   align-items: center;
   margin-bottom: -2px;
 }
 
-.doctors-filter ul li img {
+@media (max-width: 991.98px) {
+  .doctors-filter ul li {
+    width: 50%;
+    float: left;
+    padding: 7px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .doctors-filter ul li {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .doctors-filter ul li {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.doctors-filter ul li .nav-link {
+  border: none;
+  padding: 20px 15px;
+  background: rgba(30, 190, 182, 0.1);
+  border-radius: inherit;
+  align-items: center;
+  color: #233645;
+  font-weight: 600;
+  font-size: 15px;
+  width: 100%;
+  transition: all 0.35s ease-in-out;
+}
+
+.doctors-filter ul li .nav-link img {
   width: 45px;
   height: 45px;
 }
 
-.doctors-filter ul li .nav-link {
-  color: #233645;
-  font-weight: 600;
-  font-size: 15px;
+@media (max-width: 991.98px) {
+  .doctors-filter .col-lg-6 img {
+    padding: 7px !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .doctors-filter .col-lg-6 img {
+    padding: 0 !important;
+  }
 }
 
 .doctors-filter .doctor-item {
@@ -1942,6 +2128,12 @@ header .page-logo .navbar-toggler i {
   margin-left: 6%;
 }
 
+@media (max-width: 991.98px) {
+  .help-form .help-form-area {
+    margin-top: 10%;
+  }
+}
+
 @media (max-width: 767.98px) {
   .help-form .help-form-area {
     margin-top: 20%;
@@ -2135,6 +2327,12 @@ footer .footer-bottom .social-medias ul li a i {
   background: linear-gradient(90deg, #1ebeb6 0%, #00827c 100%);
   position: relative;
   text-align: center;
+}
+
+@media (max-width: 767.98px) {
+  .breadcrumb-area {
+    padding: 100px 0;
+  }
 }
 
 .breadcrumb-area .breadcrumb-background {
@@ -2402,6 +2600,10 @@ footer .footer-bottom .social-medias ul li a i {
   background-color: #f7f7f7;
 }
 
+.about-us-doctors .about-us-doctors-header {
+  margin-bottom: 15px;
+}
+
 .about-us-doctors .about-us-doctors-header .long-divider {
   display: inline-block;
   width: 40px;
@@ -2444,6 +2646,10 @@ footer .footer-bottom .social-medias ul li a i {
   padding: 0 5%;
   font-size: 15px;
   line-height: 30px;
+}
+
+.about-us-doctors .about-doctor-item {
+  margin-top: 5%;
 }
 
 .about-us-doctors .about-doctor-item .doctor-img {
@@ -2502,10 +2708,41 @@ footer .footer-bottom .social-medias ul li a i {
   padding-bottom: 300px;
 }
 
+@media (max-width: 767.98px) {
+  .departments-services {
+    padding-top: 15px;
+    padding-bottom: 360px;
+  }
+}
+
 .departments-consultation {
   padding: 0;
   position: relative;
   bottom: 100px;
+}
+
+@media (max-width: 767.98px) {
+  .departments-consultation h2 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 26px;
+  }
+}
+
+.departments-consultation p {
+  color: #666666;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+@media (max-width: 767.98px) {
+  .departments-consultation p {
+    text-align: center;
+  }
+}
+
+.departments-consultation .appoinment-form {
+  margin-left: 0;
 }
 
 .count-area {
@@ -2513,10 +2750,22 @@ footer .footer-bottom .social-medias ul li a i {
   top: -235px;
 }
 
+@media (max-width: 767.98px) {
+  .count-area {
+    top: -300px;
+  }
+}
+
 .count-area .count {
   position: relative;
   background: linear-gradient(90deg, #1ebeb6 0%, #00827c 100%);
   padding: 120px 50px;
+}
+
+@media (max-width: 991.98px) {
+  .count-area .count {
+    padding: 90px 50px;
+  }
 }
 
 .count-area .count::after {
@@ -2540,6 +2789,12 @@ footer .footer-bottom .social-medias ul li a i {
   position: relative;
   z-index: 1;
   color: white;
+}
+
+@media (max-width: 991.98px) {
+  .count-area .count .count-item {
+    margin-top: 12%;
+  }
 }
 
 .count-area .count .count-item::after {

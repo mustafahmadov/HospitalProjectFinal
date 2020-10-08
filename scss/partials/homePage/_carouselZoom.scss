@@ -1,16 +1,40 @@
 .carousel-zoom {
     overflow: hidden;
 
+    @include lg {
+        height: 753px;
+    }
+
+    @include md {
+        height: 350px;
+    }
+
+
     .carousel-control-prev-icon {
-        display: none;
-        width: 35px;
-        height: 35px;
+        width: 27px;
+        height: 27px;
+        position: absolute;
+        left: -80px;
+        transition: all 0.35s ease-in-out;
+
+    }
+
+    .carousel-control-next-icon {
+        width: 27px;
+        height: 27px;
+        position: absolute;
+        right: -80px;
+        transition: all 0.35s ease-in-out;
+
     }
 
     &:hover {
         .carousel-control-prev-icon {
-            animation: fadeInLeft 0.7s;
-            display: block;
+            left: 20px;
+        }
+
+        .carousel-control-next-icon {
+            right: 20px;
         }
     }
 
@@ -36,7 +60,7 @@
 
     .carousel-first-image {
         background-image: url("../img/1.jpg");
-        height: 700px;
+        height: 753px;
         width: 100%;
         background-size: cover;
         background-repeat: no-repeat;
@@ -47,6 +71,10 @@
         border: 1px solid transparent;
         z-index: 0;
 
+        @include lg {
+            height: 620px;
+        }
+
         @include md {
             height: 350px;
         }
@@ -56,16 +84,34 @@
 
     .carousel-content {
         position: absolute;
-        top: 30%;
-        left: 10%;
+        top: 0%;
+        padding-left: 10%;
         overflow: hidden;
         border: 1px solid transparent;
         z-index: 15;
+        height: 100%;
+        width: 75%;
+        display: flex;
+        align-items: center;
+
+        @include lg {
+            padding-left: 4%;
+            left: 2%;
+            width: 80%;
+        }
+
+        @include md {
+            left: 50%;
+            text-align: center;
+            transform: translateX(-50%);
+            padding-left: 0%;
+        }
+
     }
 
     .carousel-second-image {
         background-image: url("../img/2.jpg");
-        height: 700px;
+        height: 753px;
         width: 100%;
         background-size: cover;
         background-repeat: no-repeat;
@@ -74,6 +120,10 @@
         animation: bgZoom 20s infinite;
         overflow: hidden;
         border: 1px solid transparent;
+
+        @include lg {
+            height: 620px;
+        }
 
         @include md {
             height: 350px;
@@ -94,6 +144,28 @@
 
     .content {
         z-index: 5;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            top: -95px;
+            left: -52px;
+            content: "\f21e";
+            font-family: "Font Awesome 5 Free";
+            height: 100%;
+            width: 350px;
+            color: #ffffff;
+            z-index: -1;
+            opacity: 0.2;
+            font-weight: 600;
+            font-size: 150px;
+
+            @include md {
+                left: 50%;
+                transform: translateX(-50%);
+                top: -84px;
+            }
+        }
 
         h4 {
             text-transform: capitalize;
@@ -101,6 +173,10 @@
             margin-bottom: 25px;
             font-size: 22px;
             color: white;
+
+            @include md {
+                font-size: 18px;
+            }
         }
 
         h2 {
@@ -112,11 +188,14 @@
 
             strong {
                 display: block;
-                font-weight: 900;
+                font-weight: 800;
             }
 
+
+
             @include md {
-                font-size: 36px;
+                font-size: 32px;
+
             }
         }
 
@@ -125,9 +204,10 @@
             transition: all 0.35s ease-in-out;
             z-index: -1;
             display: inline-block;
-            padding: 17px 32px;
+            padding: 15px 27px;
             color: white;
             border-radius: 5px;
+            font-weight: 700;
 
             i {
                 height: 30px;

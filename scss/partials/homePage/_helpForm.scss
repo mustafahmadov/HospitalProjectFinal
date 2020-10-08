@@ -85,6 +85,10 @@
     .help-form-area {
         margin-left: 6%;
 
+        @include lg {
+            margin-top: 10%;
+        }
+
         @include md {
             margin-top: 20%;
             margin-left: 0;

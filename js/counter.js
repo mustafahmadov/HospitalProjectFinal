@@ -1,7 +1,9 @@
 $(document).ready(function () {
-    if ($(window).scrollTop() > 300) {
-        let countNumber = $('.count-item').countTo()
-        $('.count-item').html(countNumber);
-    }
-    console.log()
-})
+    $(window).scroll(function () {
+        console.log($(this).scrollTop());
+        if ($(this).scrollTop() < 480) {
+            let countNumber = $(".count-item").countTo();
+            $(".count-item").html(countNumber);
+        }
+    })
+});

@@ -13,9 +13,13 @@ a:hover {
   text-decoration: none;
 }
 
+.wrapper {
+  transition: all 0.3s ease-in-out;
+}
+
 @import '../scss/mixins';
 
-
+@import '../scss/partials/homePage/preIcon';
 @import '../scss/partials/homePage/topPageArea';
 @import '../scss/partials/homePage/header';
 @import '../scss/partials/homePage/carouselZoom';

@@ -1,21 +1,56 @@
 .departments-services {
     padding-bottom: 300px;
+
+    @include md {
+        padding-top: 15px;
+        padding-bottom: 360px;
+    }
 }
 
 .departments-consultation {
     padding: 0;
     position: relative;
     bottom: 100px;
+
+    h2 {
+        @include md {
+            text-align: center;
+            font-weight: 600;
+            font-size: 26px;
+        }
+    }
+
+    p {
+        color: #666666;
+        font-weight: 400;
+        font-size: 15px;
+
+        @include md {
+            text-align: center;
+        }
+    }
+
+    .appoinment-form {
+        margin-left: 0;
+    }
 }
 
 .count-area {
     position: relative;
     top: -235px;
 
+    @include md {
+        top: -300px;
+    }
+
     .count {
         position: relative;
         background: linear-gradient(90deg, rgba(30, 190, 182, 1) 0%, rgba(0, 130, 124, 1) 100%);
         padding: 120px 50px;
+
+        @include lg {
+            padding: 90px 50px;
+        }
 
         &::after {
             position: absolute;
@@ -38,6 +73,10 @@
             position: relative;
             z-index: 1;
             color: white;
+
+            @include lg {
+                margin-top: 12%;
+            }
 
             &::after {
                 position: absolute;

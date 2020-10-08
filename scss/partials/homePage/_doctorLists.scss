@@ -146,6 +146,10 @@
                 z-index: -1;
                 background-repeat: no-repeat;
                 opacity: 0.2;
+
+                @include lg {
+                    display: none;
+                }
             }
         }
 

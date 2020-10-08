@@ -4,6 +4,10 @@
     position: relative;
     text-align: center;
 
+    @include md {
+        padding: 100px 0;
+    }
+
     .breadcrumb-background {
         background-image: url('../../../img/9.png');
         background-size: cover;

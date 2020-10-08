@@ -1,4 +1,8 @@
 $(document).ready(function () {
+
+
+
+
     $(".first").owlCarousel({
         loop: true,
         margin: 10,
@@ -64,12 +68,12 @@ $(document).ready(function () {
         e.preventDefault();
         let attribute = $(this).attr("data-target");
         $(".btn-filter").removeClass("active");
-        $(".btn-filter").removeClass("default");
+        $(".nav-link").removeClass("default");
         $(".nav-link").removeClass("default-white");
         $(this).addClass("active");
-        $(this).addClass("default");
+        $(this).children(".nav-link").addClass("default");
         if ($(this).hasClass("active")) {
-            $(this).addClass("default");
+            $(this).children().addClass("default");
             $(this).children().addClass("default-white");
         }
 
@@ -124,7 +128,10 @@ $(document).ready(function () {
     // counter('.count-item4');
     // $(".count-item").countTo();
 
-
+    $(window).on('load', function () {
+        // Animate loader off screen
+        $(".pre-icon").fadeOut("slow");
+    });
 
     var wow = new WOW({
         boxClass: 'wow', // animated element css class (default is wow)

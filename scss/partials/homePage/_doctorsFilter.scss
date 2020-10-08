@@ -3,7 +3,7 @@
     background-color: #f7f7f7;
 
     .default {
-        background: rgba(30, 190, 182, 1);
+        background: rgba(30, 190, 182, 1) !important;
     }
 
     .default-white {
@@ -64,27 +64,64 @@
             cursor: pointer;
             display: flex;
             border: none;
-            padding: 20px 15px;
-            background: rgba(30, 190, 182, 0.1);
+            // padding: 20px 15px;
+            // background: rgba(30, 190, 182, 0.1);
             border-radius: inherit;
             align-items: center;
             margin-bottom: -2px;
 
-            img {
-                width: 45px;
-                height: 45px;
+            @include lg {
+                width: 50%;
+                float: left;
+                padding: 7px;
             }
 
+            @include md {
+                width: 100%;
+                padding: 0;
+            }
+
+            @include sm {
+                width: 100%;
+                padding: 0;
+            }
+
+
             .nav-link {
-                // border: none;
-                // padding: 20px 15px;
-                // background: rgba(30, 190, 182, 0.1);
-                // border-radius: inherit;
-                // align-items: center;
+                border: none;
+                padding: 20px 15px;
+                background: rgba(30, 190, 182, 0.1);
+                border-radius: inherit;
+                align-items: center;
                 color: #233645;
                 font-weight: 600;
                 font-size: 15px;
+                width: 100%;
+                transition: all 0.35s ease-in-out;
+
+                @include lg {}
+
+
+
+                img {
+                    width: 45px;
+                    height: 45px;
+                }
             }
+        }
+    }
+
+    .col-lg-6 {
+        img {
+            @include lg {
+                padding: 7px !important;
+
+            }
+
+            @include md {
+                padding: 0 !important;
+            }
+
         }
     }
 
@@ -115,6 +152,9 @@
             font-size: 15px;
             line-height: 30px;
         }
+
+
+
 
         a {
             background: linear-gradient(90deg, rgba(30, 190, 182, 1) 0%, rgba(0, 130, 124, 1) 100%);
