@@ -1,8 +1,6 @@
 $(document).ready(function () {
 
 
-
-
     $(".first").owlCarousel({
         loop: true,
         margin: 10,
@@ -132,6 +130,8 @@ $(document).ready(function () {
         // Animate loader off screen
         $(".pre-icon").fadeOut("slow");
     });
+
+
 
     var wow = new WOW({
         boxClass: 'wow', // animated element css class (default is wow)

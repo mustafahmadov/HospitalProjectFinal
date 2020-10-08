@@ -30,6 +30,11 @@
             display: flex;
             justify-content: space-evenly;
 
+            @include lg {
+                box-shadow: 0 0 10px #e7e7e7;
+                bottom: -30px;
+            }
+
             @include md {
                 bottom: -30px;
                 box-shadow: 0 0 10px #e7e7e7;
@@ -90,13 +95,18 @@
         }
 
         @include md {
-            margin-top: 20%;
+            margin-top: 13%;
             margin-left: 0;
         }
 
         h2 {
             color: #233645;
             font-weight: 600;
+
+            @include md {
+                text-align: center;
+                font-size: 26px;
+            }
 
             @include sm {
                 text-align: center;
