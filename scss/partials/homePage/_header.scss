@@ -26,29 +26,31 @@ header {
         @include lg {
           position: absolute !important;
           top: 23px;
-          left: 33%;
+          left: 50%;
+          transform: translateX(-50%);
         }
       }
     }
 
     .navbar-nav {
-
-
       @include lg {
         padding-left: 14px;
         padding-right: 14px;
-
-
+        padding-bottom: 24px;
+        max-height: 305px;
+        overflow-y: scroll;
       }
 
       @include md {
         padding-left: 14px;
         padding-right: 14px;
+        padding-bottom: 24px;
       }
 
       @include sm {
         padding-left: 24px;
         padding-right: 24px;
+        padding-bottom: 24px;
       }
 
 
@@ -56,6 +58,11 @@ header {
       .nav-item {
         margin-left: 2%;
         margin-left: 0 !important;
+        @include lg{
+          &:nth-child(6){
+            padding-top: 6px;
+          }
+        }
 
         &:hover {
           @include cmntablet {
@@ -72,7 +79,7 @@ header {
         }
 
         @include lg {
-          .nav-link {
+          .dropdown-toggle {
             &::after {
               right: 0;
               content: "\f105" !important;
@@ -99,12 +106,32 @@ header {
           }
         }
 
-        .nav-link {
-          text-transform: uppercase;
+        .nav-link{
           font-size: 13px;
+          text-transform: uppercase;
+          color: #333333;
+          background-color: transparent !important;
+          -webkit-transition: all 0.35s ease-in-out;
           letter-spacing: 0.06em;
-          font-weight: 700;
           padding: 35px 15px;
+          font-weight: 600;
+          @include xl {
+            padding: 35px 13px !important;
+          }
+
+          @include lg {
+            padding: 13px 0 !important;
+          }
+
+          @include md {
+            padding: 13px 0 !important;
+          }
+        }
+        .dropdown-toggle {
+          text-transform: uppercase;
+          letter-spacing: 0.06em;
+          font-weight: 600;
+          // padding: 35px 15px;
           color: #333333;
           background-color: transparent !important;
           -webkit-transition: all 0.35s ease-in-out;
@@ -115,7 +142,6 @@ header {
           }
 
           @include lg {
-            // padding: 3px 4px !important;
             padding: 13px 0 !important;
             color: #333333;
             background-color: transparent !important;
@@ -148,6 +174,12 @@ header {
           border-radius: 4px;
           -webkit-transition: all 0.35s ease-in-out;
           animation: fadeIn .8s;
+          position: absolute;
+          top: 86px;
+          @include lg{
+            position: static;
+          }
+          
 
 
           .dropdown-item {
@@ -156,7 +188,7 @@ header {
             font-size: 14px;
             font-weight: 600;
             padding: 14px 10px;
-            border-bottom: solid 1px #e0e0e0;
+            border-bottom: solid 1px #f5f5f5;
             -webkit-transition: all 0.35s ease-in-out;
 
             &:hover {
@@ -169,7 +201,7 @@ header {
               background-color: transparent !important;
               font-weight: 600;
               font-size: 14px;
-              border-bottom: solid 1px #e0e0e0;
+              border-bottom: solid 1px #f5f5f5;
             }
           }
         }
@@ -246,10 +278,6 @@ header {
     @include sm {
       padding-left: 15px;
     }
-
-    @include md {}
-
-    @include sm {}
   }
 }
 

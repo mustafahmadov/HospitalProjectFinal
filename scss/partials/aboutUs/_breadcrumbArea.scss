@@ -37,6 +37,9 @@
         background: transparent none repeat scroll 0 0;
         display: inline-block;
         text-align: center;
+        @include sm{
+            padding: 0!important;
+        }
 
         li {
             position: relative;
@@ -49,6 +52,9 @@
             font-size: 14px;
             text-align: center;
             display: inline-block;
+            &:nth-child(3){
+                text-decoration: underline;
+            }
 
             a {
                 position: relative;

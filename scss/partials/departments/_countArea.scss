@@ -1,5 +1,7 @@
 .departments-services {
     padding-bottom: 300px;
+    padding-top: 60px;
+    background-color: #f7f7f7;
 
     @include md {
         padding-top: 15px;
@@ -40,7 +42,7 @@
     top: -235px;
 
     @include md {
-        top: -300px;
+        // top: -300px;
     }
 
     .count {

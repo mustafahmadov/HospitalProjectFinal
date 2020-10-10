@@ -1,7 +1,20 @@
 $(document).ready(function () {
+    //===PRELOADER===//
+    $(window).on('load', function () {
+        $(".pre-icon").fadeOut("slow");
+    });
+    /////
 
 
-    $(".first").owlCarousel({
+    //===HAMBURGER ICON ONCLICK===//
+    $('.fa-bars').click(function(){
+        $(this).toggleClass('fa-times');
+    })
+    /////
+
+
+    //===SERVICES CAROUSEL===//
+    $(".services-carousel").owlCarousel({
         loop: true,
         margin: 10,
         responsiveClass: true,
@@ -23,6 +36,10 @@ $(document).ready(function () {
             },
         },
     });
+    /////
+
+
+    //===TESTIMONIAL CAROUSEL===//
     $(".testimonial-carousel").owlCarousel({
         loop: true,
         margin: 30,
@@ -40,30 +57,31 @@ $(document).ready(function () {
             },
         },
     });
+    /////
+    
+
+    // === MAKE STICKY HEADER ===//
+    let stickyHeader = document.querySelector("header");
+    let sticky = header.offsetTop;
+    function makeStickyNav() {
+        if (window.pageYOffset > sticky) {
+            stickyHeader.classList.add("sticky-top");
+        } else {
+            stickyHeader.classList.remove("sticky-top");
+        }
+    }
     $(window).scroll(function () {
         makeStickyNav();
     });
-
-    // Get the header
-    var nav = document.querySelector("header");
-
-    // Get the offset position of the navbar
-    var sticky = header.offsetTop;
-
-    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-    function makeStickyNav() {
-        if (window.pageYOffset > sticky) {
-            nav.classList.add("sticky-top");
-        } else {
-            nav.classList.remove("sticky-top");
-        }
-    }
+    /////////
 
 
+    //=== NICE SELECT PLUGIN CALL FOR FORM ===///
     $("select").niceSelect();
+    /////
 
 
-
+    ////===DOCTORS FILTER CODE === ////
     let btns = $(".btn-filter");
     btns.click(function (e) {
         e.preventDefault();
@@ -78,31 +96,48 @@ $(document).ready(function () {
             $(this).children().addClass("default-white");
         }
 
-        $(".doctor-area")
-            .not("." + attribute)
-            .hide(1000);
-        $(".doctor-area")
-            .filter("." + attribute)
-            .show(1000);
+        $(".doctor-area").not("." + attribute).hide();
+        $(".doctor-area").filter("." + attribute).show();
         if ($(".doctor-area").hasClass("d-none")) {
             $(".doctor-area").removeClass("d-none");
         }
     });
+    /////
     
 
 
-    $(window).on('load', function () {
-        $(".pre-icon").fadeOut("slow");
-    });
+    //===COUNTER===//
+    $(window).scroll(function () {
+        let isCounted = false;
+        if($('.count-item').hasClass('counted')){
+            isCounted = true;
+        }
+        if(isCounted){
+            if ($(this).scrollTop() > 450) {
+                let countNumber = $(".count-item").countTo();
+                $(".count-item").html(countNumber);
+                $('.count-item').removeClass('counted');
+            }
+        }
+    })
+    /////
+
+    
+    //===MODAL VIDEO PLUGIN CALL===//
+    $(document).ready(function () {
+        $(".js-modal-btn").modalVideo();
+    })
+    /////
 
 
-
+    //===WOW PLUGIN CALL===/
     var wow = new WOW({
-        boxClass: 'wow', // animated element css class (default is wow)
-        animateClass: 'animated', // animation css class (default is animated)
-        offset: 0, // distance to the element when triggering the animation (default is 0)
-        mobile: true, // trigger animations on mobile devices (default is true)
-        live: true // act on asynchronously loaded content (default is true)
+        boxClass: 'wow', 
+        animateClass: 'animated',
+        offset: 0,
+        mobile: true,
+        live: true
     });
     wow.init();
+    /////
 });

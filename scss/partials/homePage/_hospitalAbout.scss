@@ -99,6 +99,7 @@
 
         @include lg {
             margin-top: 15%;
+            padding-left: 0;
         }
 
         @include md {
@@ -187,6 +188,7 @@
             color: white;
             border-radius: 5px;
             font-weight: 700;
+            border: none;
 
             i {
                 height: 30px;

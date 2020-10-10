@@ -1,22 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Inter, sans-serif;
-}
-
-li {
-  list-style-type: none !important;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-.wrapper {
-  transition: all 0.3s ease-in-out;
-}
-
+@import '../scss/base';
 @import '../scss/mixins';
 
 @import '../scss/partials/homePage/preIcon';

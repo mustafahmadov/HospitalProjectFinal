@@ -116,6 +116,9 @@ footer {
             color: white;
             margin: 0 !important;
 
+            @include lg{
+                text-align: center;
+            }
             @include md {
                 text-align: center;
             }
@@ -127,10 +130,14 @@ footer {
         }
 
         .social-medias {
+            @include lg{
+                text-align: center;
+            }
             ul {
                 margin-bottom: 0 !important;
 
-                @include md {
+        
+                @include lg {
                     justify-content: center !important;
                     margin-top: 3%;
                 }
