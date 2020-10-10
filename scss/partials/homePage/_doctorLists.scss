@@ -12,7 +12,7 @@
     }
 
     .doctor-list-back {
-        background: url('../img/doctorlist.jpg');
+        background: url('../../../img/doctorLists/doctorlist.jpg');
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -154,7 +154,7 @@
                 content: "";
                 height: 300px;
                 width: 300px;
-                background: url('../img/dotted-shape.png');
+                background: url('../../../img/doctorLists/dotted-shape.png');
                 z-index: -1;
                 background-repeat: no-repeat;
                 opacity: 0.2;

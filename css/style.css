@@ -25,7 +25,7 @@ a:hover {
   text-align: center;
   left: 0;
   top: 0;
-  z-index: 999999;
+  z-index: 9999999;
   background-color: white;
 }
 
@@ -484,7 +484,7 @@ header .page-logo .navbar-toggler i {
 }
 
 .carousel-zoom .carousel-first-image {
-  background-image: url("../img/1.jpg");
+  background-image: url("../../../img/carouselZoom/1.jpg");
   height: 753px;
   width: 100%;
   background-size: cover;
@@ -540,7 +540,7 @@ header .page-logo .navbar-toggler i {
 }
 
 .carousel-zoom .carousel-second-image {
-  background-image: url("../img/2.jpg");
+  background-image: url("../../../img/carouselZoom/2.jpg");
   height: 753px;
   width: 100%;
   background-size: cover;
@@ -1086,7 +1086,7 @@ header .page-logo .navbar-toggler i {
   content: "";
   height: 150px;
   width: 150px;
-  background: url("../../../img/4.png");
+  background: url("../../../img/services/4.png");
   background-size: contain;
   z-index: 1;
   background-repeat: no-repeat;
@@ -1402,7 +1402,7 @@ header .page-logo .navbar-toggler i {
 }
 
 .doctor-lists .doctor-list-back {
-  background: url("../img/doctorlist.jpg");
+  background: url("../../../img/doctorLists/doctorlist.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1560,7 +1560,7 @@ header .page-logo .navbar-toggler i {
   content: "";
   height: 300px;
   width: 300px;
-  background: url("../img/dotted-shape.png");
+  background: url("../../../img/doctorLists/dotted-shape.png");
   z-index: -1;
   background-repeat: no-repeat;
   opacity: 0.2;
@@ -2127,7 +2127,7 @@ header .page-logo .navbar-toggler i {
 .help-form .help-form-image {
   height: 460px;
   width: 100%;
-  background: url("../img/help.jpg");
+  background: url("../../../img/helpForm/help.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2618,7 +2618,7 @@ footer .footer-bottom .social-medias ul li a i {
   content: "";
   width: 100px;
   height: 100px;
-  background: url("../../../img/shape10.png");
+  background: url("../../../img/aboutUsServices/shape10.png");
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0.3;

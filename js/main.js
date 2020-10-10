@@ -2,16 +2,15 @@ $(document).ready(function () {
     //===PRELOADER===//
     $(window).on('load', function () {
         $(".pre-icon").fadeOut("slow");
+        // $('.nav-link').unbind();
     });
     /////
-
 
     //===HAMBURGER ICON ONCLICK===//
     $('.fa-bars').click(function(){
         $(this).toggleClass('fa-times');
     })
     /////
-
 
     //===SERVICES CAROUSEL===//
     $(".services-carousel").owlCarousel({
@@ -123,11 +122,11 @@ $(document).ready(function () {
     /////
 
     
-    //===MODAL VIDEO PLUGIN CALL===//
-    $(document).ready(function () {
+    //===MODAL VIDEO PLUGIN CALL===// 
         $(".js-modal-btn").modalVideo();
-    })
     /////
+
+    
 
 
     //===WOW PLUGIN CALL===/
