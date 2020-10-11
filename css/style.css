@@ -1099,6 +1099,7 @@ header .page-logo .navbar-toggler i {
   color: #233645;
   font-size: 22px;
   margin-top: 0;
+  font-weight: 600;
 }
 
 .services .item .item-content p {
@@ -2086,6 +2087,12 @@ header .page-logo .navbar-toggler i {
   color: #1ebeb6;
 }
 
+.latest-blog .blog-item .blog-item-content p {
+  color: #666666;
+  font-size: 15px;
+  margin-top: 15px;
+}
+
 .latest-blog .blog-item .blog-item-content .blog-item-footer {
   padding-top: 8%;
   margin-top: 8%;
@@ -2125,13 +2132,14 @@ header .page-logo .navbar-toggler i {
 }
 
 .help-form .help-form-image {
-  height: 460px;
+  height: 100%;
   width: 100%;
   background: url("../../../img/helpForm/help.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  transition: all 0.35s ease-in-out;
 }
 
 @media (max-width: 767.98px) {
@@ -2278,6 +2286,7 @@ header .page-logo .navbar-toggler i {
   font-weight: 700;
   border: none;
   margin-top: 15px;
+  outline: none;
 }
 
 footer {
@@ -2321,6 +2330,13 @@ footer .footer-logo-area ul li .icon-info h5 {
 
 footer .footer-logo-area ul li .icon-info span {
   color: #96aac1;
+}
+
+@media (max-width: 991.98px) {
+  footer .departments,
+  footer .usefull-links {
+    margin-left: 7%;
+  }
 }
 
 footer .departments h4,

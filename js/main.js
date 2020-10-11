@@ -126,6 +126,49 @@ $(document).ready(function () {
         $(".js-modal-btn").modalVideo();
     /////
 
+
+    ///===HELP FORM AREA INPUT VALIDATION===///
+    const styles = {
+        "position" : "relative",
+        "padding" : ".75rem 1.25rem",
+        "margin-top" : "1rem",
+        "border" : "1px solid transparent",
+        "border-radius" : ".25rem",
+        "display" : "block"
+    }
+    let errorSpan = document.createElement('span');
+    let stepNextInput = false;
+    let validateInput = (inputId) => {
+        let input = $(inputId);
+        if(input.val().split(' ').join('') === ''){
+            errorSpan.innerText = `You must enter your ${inputId.substring(1)}`;
+            Object.assign(errorSpan.style,styles);
+            let errorArea = $('.errorArea');
+            errorArea.append(errorSpan);
+            stepNextInput = false;
+        }
+        else{
+            errorSpan.innerText = "";
+            stepNextInput = true;
+        }
+        return stepNextInput;
+    }
+    $("form").submit(function(e){
+        e.preventDefault();
+        validateInput("#name");
+        if(stepNextInput){
+            validateInput("#email");
+            if(stepNextInput){
+                validateInput("#phone");
+                if(stepNextInput){
+                    validateInput("#comment");
+                }
+            }
+        }
+        
+        
+    })
+    /////
     
 
 

@@ -46,6 +46,9 @@ footer {
 
     .departments,
     .usefull-links {
+        @include lg{
+            margin-left: 7%;
+        }
         h4 {
             margin-bottom: 30px;
             font-weight: 700;
